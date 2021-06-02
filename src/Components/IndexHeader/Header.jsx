@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Container } from 'reactstrap';
+// import { Row, Col, Container } from 'reactstrap';
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 
@@ -46,8 +46,8 @@ class Header extends React.Component {
                       <div className={`sub_menu_closer ${this.state.technology_dropdown ? 'd-block' : ''}`} onClick={()=>this.openDropdown('technology_dropdown')}></div>
                     <div className="categories d-none d-md-block">
 
-                        <UncontrolledButtonDropdown classNameName="">
-                            <DropdownToggle classNameName="drop_toggle">
+                        <UncontrolledButtonDropdown className="">
+                            <DropdownToggle className="drop_toggle">
                               <button className="dropdown-toggle clr_white f16 f500 no_after d-flex align-items-center drop_icon_rotate">
                                 Categories <i className="fas fa-chevron-down ms-2"></i>
                               </button>
@@ -155,18 +155,18 @@ class Header extends React.Component {
                       <button class={`fas fa-times toggle_drawer drawer_closer clr_white ms-auto`} onClick={()=> this.openDropdown('mobDrawer')}></button>
                       <ul>
                           <li class="main_links">
-                              <Link to="index.php">Home</Link>
+                              <Link to="/">Home</Link>
                           </li>
                           <li class="main_links">
-                              <Link to="browse.php">Browse</Link>
+                              <Link to="/">Browse</Link>
                           </li>
                           <li class="main_links">
-                              <Link to="blog.php">Blog</Link>
+                              <Link to="/">Blog</Link>
                           </li>
                           <li>
                               <Link class="theme_outline_btn" data-toggle="modal" data-target="#login_modal" data-dismiss='modal'>Login <img src="./assets/img/login-key.png" alt="" /></Link>
                           </li>
-                          <li class="pr-0">
+                          <li class="pe-0">
                               <Link class="theme_dark_btn" data-toggle="modal" data-target="#signup_modal" data-dismiss='modal'>Sign up <img src="./assets/img/right-arrow.png" alt="" /></Link>
                           </li>
 
@@ -199,120 +199,6 @@ class Header extends React.Component {
                   <div className="mob_drawer">
 
                     <button className="fas fa-bars clr_white toggle_drawer me-2" onClick={()=> this.openDropdown('mobDrawer')}></button>
-
-                    {/* <ul className="d-inline-block">
-
-                      <li>
-                        <div className="dropdown position_relative">
-                          <div className="user_img_info notification_drop" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <a href="/" className="notification_bell clr_white"><i className="far fa-bell"><span className="count clr_white f12">2</span></i></a>
-                          </div>
-                          <div className="dropdown-menu user_notification_dropdown" aria-labelledby="dropdownMenuButton">
-                            <p className="f16 f500 clr_grey mb-3">NOTIFICATIONS</p>
-                            <ul>
-                              <li>
-                                <div className="user_img_info">
-                                  <a href="/" className="d-flex align-items-center">
-                                    <div className="user_img">
-                                      <img src="./assets/img/accepted-check.png" alt="" className="ms-0" />
-                                    </div>
-                                    <div className="user_info ms-3">
-                                      <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">accept your request.</span></h6>
-                                      <p className="f14 f400 clr_grey">2 day ago</p>
-                                    </div>
-                                  </a>
-                                </div>
-                              </li>
-
-                              <li>
-                                <div className="user_img_info">
-                                  <a href="/" className="d-flex align-items-center">
-                                    <div className="user_img">
-                                      <img src="./assets/img/rejected-check.png" alt="" className="ms-0" />
-                                    </div>
-                                    <div className="user_info ms-3">
-                                      <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">accept your request.</span></h6>
-                                      <p className="f14 f400 clr_grey">2 day ago</p>
-                                    </div>
-                                  </a>
-                                </div>
-                              </li>
-
-                              <li>
-                                <div className="user_img_info">
-                                  <a href="/" className="d-flex align-items-center">
-                                    <div className="user_img">
-                                      <img src="./assets/img/user_img.png" alt="" className="ms-0" />
-                                    </div>
-                                    <div className="user_info ms-3">
-                                      <h6 className="f15 f500 clr_black"><span className="f400 clr_grey">Your call with</span> Kate Kendall <span className="f400 clr_grey">accept your request.</span></h6>
-                                      <p className="f14 f400 clr_grey">2 day ago</p>
-                                    </div>
-                                  </a>
-                                </div>
-                              </li>
-
-                              <li>
-                                <div className="user_img_info">
-                                  <a href="/" className="d-flex align-items-center">
-                                    <div className="user_img">
-                                      <img src="./assets/img/user_img-2.png" alt="" className="ms-0" />
-                                    </div>
-                                    <div className="user_info ms-3">
-                                      <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">accept your call.</span></h6>
-                                      <p className="f14 f400 clr_grey">2 day ago</p>
-                                    </div>
-                                  </a>
-                                </div>
-                              </li>
-
-                              <li>
-                                <div className="user_img_info">
-                                  <div className="d-flex align-items-center">
-                                    <div className="user_img">
-                                      <img src="./assets/img/user_img-3.png" alt="" className="ms-0" />
-                                    </div>
-                                    <div className="user_info ms-3">
-                                      <h6 className="f15 f500 clr_black"><span className="f400 clr_grey">Give feeback review to</span> <a href="/" className="text_underline">Kate Kendall</a></h6>
-                                      <p className="f14 f400 clr_grey">2 day ago</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-
-                              <li>
-                                <div className="user_img_info">
-                                  <div className="d-flex align-items-center">
-                                    <div className="user_img">
-                                      <img src="./assets/img/user_img-3.png" alt="" className="ms-0" />
-                                    </div>
-                                    <div className="user_info ms-3">
-                                      <h6 className="f15 f500 clr_black"><span className="f400 clr_grey">Give feeback review to</span> <a href="/" className="text_underline">Kate Kendall</a></h6>
-                                      <p className="f14 f400 clr_grey">2 day ago</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-
-                              <li>
-                                <div className="user_img_info">
-                                  <div className="d-flex align-items-center">
-                                    <div className="user_img">
-                                      <img src="./assets/img/user_img-3.png" alt="" className="ms-0" />
-                                    </div>
-                                    <div className="user_info ms-3">
-                                      <h6 className="f15 f500 clr_black"><span className="f400 clr_grey">Give feeback review to</span> <a href="/" className="text_underline">Kate Kendall</a></h6>
-                                      <p className="f14 f400 clr_grey">2 day ago</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </div>
-                      </li>
-                    </ul> */}
 
                   </div>
 

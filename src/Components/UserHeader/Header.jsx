@@ -10,7 +10,8 @@ class Header extends React.Component {
     super(props);
     this.state = {
       technology_dropdown: false,
-      filterList: false
+      filterList: false,
+      mobDrawer: false,
     }
   }
 
@@ -152,8 +153,13 @@ class Header extends React.Component {
                   <div className={`header_link ${this.state.mobDrawer ? 'show' : ''}`}>
                       <button class={`fas fa-times toggle_drawer drawer_closer clr_white ms-auto`} onClick={()=> this.openDropdown('mobDrawer')}></button>
                     <ul>
+                      
                       <li className="main_links">
-                        <Link to="browse.php">Browse</Link>
+                        <Link to="/">Home</Link>
+                      </li>
+                      
+                      <li className="main_links">
+                        <Link to="">Browse</Link>
                       </li>
 
                       <div className="d-block d-lg-none">
@@ -182,7 +188,7 @@ class Header extends React.Component {
                         <UncontrolledButtonDropdown classNameName="">
                             <DropdownToggle classNameName="drop_toggle">
                             <div className="user_img_info notification_drop" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <Link className="notification_bell"><i className="far fa-bell"><span className="count clr_white f12">2</span></i></Link>
+                              <a className="notification_bell"><i className="far fa-bell"><span className="count clr_white f12">2</span></i></a>
                             </div>
                             </DropdownToggle>
                             <DropdownMenu className='user_notification_dropdown expert_noti_dropdown'>
@@ -380,7 +386,7 @@ class Header extends React.Component {
                     <ul className="d-inline-block">
 
                       <li>
-                        <UncontrolledButtonDropdown classNameName="">
+                      <UncontrolledButtonDropdown classNameName="">
                             <DropdownToggle classNameName="drop_toggle">
                             <div className="user_img_info notification_drop" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <Link className="notification_bell"><i className="far fa-bell"><span className="count clr_white f12">2</span></i></Link>
@@ -488,9 +494,8 @@ class Header extends React.Component {
                                 </ul>
 
                             </DropdownMenu>
-                        </UncontrolledButtonDropdown>  
+                        </UncontrolledButtonDropdown> 
                       </li>
-
                     </ul>
 
                   </div>
