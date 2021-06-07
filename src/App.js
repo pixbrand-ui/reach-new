@@ -66,6 +66,12 @@ class App extends React.Component{
                 <Route path={'/payout-details'} exact component={(props) => <PayoutDetails {...props} />} />
                 <Route path={'/under-maintenance'} exact component={(props) => <UnderMaintenance {...props} />} />
                 <Route path={'/social-media'} exact component={(props) => <SocialMedia {...props} />} />
+                <Route path={'/setting'} exact component={(props) => <UserSetting {...props} />} />
+                <Route path={'/notification'} exact component={(props) => <Notification {...props} />} />
+                <Route path={'/promotional-offers'} exact component={(props) => <PromotionalOffers {...props} />} />
+                <Route path={'/change-password'} exact component={(props) => <ChangePassword {...props} />} />
+                <Route path={'/support'} exact component={(props) => <Support {...props} /> } />
+                <Route path={'/deactivate-account'} exact component={(props) => <DeactivateAccount {...props} /> } />
 
                 <Route path={'*'} exact component={(props) => <Error {...props} />} />
               </Switch>

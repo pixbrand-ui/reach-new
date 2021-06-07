@@ -87,9 +87,9 @@ class PaymentMethod extends React.Component {
                     </div>
 
                     <div class="d-flex align-items-center justify-content-end mb-4">
-                      <img src={Images.visa_card.default} alt="" class="me-2" />
-                      <img src={Images.mastercard.default} alt="" class="me-2" />
-                      <img src={Images.american_card.default} alt="" class="" />
+                      <img src={Images.visa_card.default} alt="" class="me-2 mb-2" />
+                      <img src={Images.mastercard.default} alt="" class="me-2 mb-2" />
+                      <img src={Images.american_card.default} alt="" class=" mb-2" />
                     </div>
 
                     <form action="" class="w-100">

@@ -83,7 +83,7 @@ class Footer extends React.Component{
 
                 <footer id="copyright_sec" className="copyright_sec">
                     <div className="container">
-                        <div className="row">
+                        <div className="row align-items-center">
                             <div className="col-6">
                                 <p className="f14 f400 clr_grey">Copyright © 2021 Charles.com. All rights reserved.</p>
                             </div>

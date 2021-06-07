@@ -3,6 +3,7 @@ import React from 'react';
 // import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 import Header from '../../Components/IndexHeader'
+import UserHeader from '../../Components/UserHeader'
 import Slider from "react-slick";
 // import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
@@ -43,7 +44,9 @@ class Home extends React.Component {
       testi_slider: [
         {video: Images.pattern.default , poster: Images.test_video_poster.default , },
         {video: Images.pattern.default , poster: Images.test_video_poster.default , },
-        {video: Images.pattern.default , poster: Images.test_video_poster.default , }
+        {video: Images.pattern.default , poster: Images.test_video_poster.default , },
+        {video: Images.pattern.default , poster: Images.test_video_poster.default , },
+        {video: Images.pattern.default , poster: Images.test_video_poster.default , },
       ],
 
 
@@ -51,11 +54,6 @@ class Home extends React.Component {
       videoToggle: false,
 
     }
-  }
-
-
-  videoToggle = ()=> {
-    this.setState({videoToggle: !this.state.videoToggle})
   }
 
   toggleDropdown = (dropName) =>{
@@ -204,7 +202,8 @@ class Home extends React.Component {
 
     return (
       <React.Fragment>
-        <Header></Header>
+        <Header />
+        {/* <UserHeader /> */}
 
         <section id="banner_section" className="banner_section bg_dark_green">
           <div className="container">
@@ -382,14 +381,18 @@ class Home extends React.Component {
                                 <div className="row">
                                     <div className="col-12 col-md-6">
                                         <div className="testi_video video_wrapper">
-                                            <video src={obj.video} width="100%" height="100%" poster={obj.poster} ref='testiVideo' pl></video>
-                                            <button className="video_controller" onClick={()=> this.videoToggle()}>
-
+                                            <video 
+                                              src={obj.video} 
+                                              width="100%" 
+                                              height="100%" 
+                                              poster={obj.poster}
+                                              />
+                                            <button className="video_controller" onClick={()=> {this.toggleDropdown('videoToggle')}}>
                                               {
                                                 this.state.videoToggle ? 
-                                                <span><img src={Images.pause_icon.default} alt="" className="pause_btn video_btns" /></span>
+                                                <span><img src={Images.pause_icon.default} alt="" className="pause_btn video_btns"/></span>
                                                 :
-                                                <span><img src={Images.play_icon.default} alt="" className="play_btn video_btns ms-1" /></span>
+                                                <span><img src={Images.play_icon.default} alt="" className="play_btn video_btns ms-1"/></span>
                                               }
                                             </button>
                                         </div>
@@ -397,8 +400,8 @@ class Home extends React.Component {
                                     <div className="col-12 col-md-6 d-flex align-items-center">
                                         <div className="testi_content">
                                             <p className="f22 f500 clr_black mb-5">
-                                                "We've used Charles for Shopify web development, graphic design, and backend web development. Working
-                                                with Fiverr makes my job a little
+                                                "We've used Charles for Shopify web development, graphic design, 
+                                                and backend web development. Working with Fiverr makes my job a little
                                                 easier every day."
                                             </p>
                                             <div className="user_img_info">
@@ -421,7 +424,6 @@ class Home extends React.Component {
                       
                     }
                   </Slider>
-
                 </div>
             </div>
         </section>
@@ -513,13 +515,5 @@ class Home extends React.Component {
       )
     }
   }
-
-
-
-  // const ArrowHandler = (props) => {
-  //   return <span className={`cmn_nav ${props.icon}`} onClick={props.onClick}>
-  //     <img src={Images.left_nav.default} alt=""></img>
-  //   </span>
-  // }
 
 export default Home;

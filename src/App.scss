@@ -1152,6 +1152,7 @@ select.theme_input_2{
   justify-content: center;
   transition: var(--transition);
   overflow: hidden;
+  transition: var(--transition);
 }
 
 .video_controller{
@@ -1164,7 +1165,6 @@ select.theme_input_2{
   background-color: #f4fbf7ba;
 }
 .video_controller img{
-  transition: var(--transition);
   padding: 30px;
 }
 .video_controller:hover img{
