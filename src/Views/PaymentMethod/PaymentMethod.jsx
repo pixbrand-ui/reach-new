@@ -235,10 +235,10 @@ class PaymentMethod extends React.Component {
                             </div>
                             <div>
                               <button 
-                                class={`theme_outline_btn cmn_btn toggle_connect_btn ${this.state.connectBtn ? 'connect_btn' : 'disconnect_btn cmn_outline_grey_btn clr_grey'}`}
+                                class={`theme_outline_btn cmn_btn toggle_connect_btn ${this.state.connectBtn ? 'disconnect_btn cmn_outline_grey_btn clr_grey' : 'connect_btn'}`}
                                 onClick={()=> this.setState({connectBtn: !this.state.connectBtn})}
                                 >
-                                {this.state.connectBtn ? 'Connect' : 'Disconnect'}
+                                {this.state.connectBtn ? 'Disconnect' : 'Connect'}
                               </button>
                             </div>
 

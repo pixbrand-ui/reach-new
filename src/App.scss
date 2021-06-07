@@ -271,6 +271,7 @@ a.clr_grey:hover{
   border-radius: 3px;
   position: relative;
   z-index: 2;
+  transition: var(--transition);
 }
 
 /* .theme_dark_btn::after{
@@ -560,7 +561,7 @@ select.theme_input_2{
   border-radius: 10px !important;
   overflow: hidden;
 }
-.modal_w_450 .modal-dialog{
+.modal_w_450.modal-dialog{
   max-width: 450px;
 }
 .green_hover:hover{
@@ -601,7 +602,7 @@ select.theme_input_2{
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 100000;
+  z-index: 1049;
 }
 .header_box{
   display: flex;
@@ -838,9 +839,6 @@ select.theme_input_2{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.lock_show_icon{
-  display: none;
 }
 
 /* -------------Sign Up modal--------- */
@@ -3366,7 +3364,7 @@ body .payout_details_accordion .accordion-button::after{
   opacity: 1;
 }
 
-.link_send_popup .modal-dialog{
+.link_send_popup.modal-dialog{
   max-width: 400px;
 }
 
@@ -4160,4 +4158,69 @@ body .slick-disabled{
 .react-tagsinput-tag a::before{
   font-size: 24px;
   font-weight: 100;
+}
+
+.modal_b_p_0 .modal-body{
+  padding: 0;
+}
+
+.junk_link .hover_img{
+  display: none;
+}
+.junk_link:hover img{
+  display: none;
+}
+.junk_link:hover .hover_img{
+  display: inline-block;
+}
+// ------------------------------Incomplete-------------
+.payout_accordion{
+  margin-bottom: 5px;
+
+  button{
+    padding: 7px 15px;
+    background: #7a7d851c;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .accordion_icon{
+      font-size: 12px;
+    }
+  }
+
+  button:active:focus,
+  button:focus,
+  button:hover{
+    padding: 7px 15px;
+    background: #7a7d851c;
+    border: none;
+    box-shadow: none;
+    color: var(--grey);
+  }
+
+  .card{
+    border: none;
+  }
+  .card-body{
+    padding: 0;
+
+    .transaction_row:last-child{
+      border-bottom: 0;
+    }
+  }
+
+}
+
+.maintenance_img{
+  width: 80%;
+}
+
+.deactiveSteps{
+  display: none;
+}
+.deactiveSteps.active{
+  display: block;
 }

@@ -63,7 +63,7 @@ class PaymentBilling extends React.Component {
                 </div>
 
                 <div class="user_account_card user_edit_pro_card">
-                  <a href="billing-address.php" class="d-flex justify-content-between align-items-center">
+                  <a href="/billing-address" class="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 class="f20 f600 clr_black mb-2">Billing Address</h3>
                       <p class="f14 f400 clr_grey">Credit Card, Debit card, Stripe, billing address Details</p>
@@ -75,7 +75,7 @@ class PaymentBilling extends React.Component {
                 </div>
 
                 <div class="user_account_card user_edit_pro_card">
-                  <a href="payout-details.php" class="d-flex justify-content-between align-items-center">
+                  <a href="payout-details" class="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 class="f20 f600 clr_black mb-2">Payout Detail</h3>
                       <p class="f14 f400 clr_grey">Connect your social media account</p>

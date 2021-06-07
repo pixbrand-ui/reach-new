@@ -58,6 +58,10 @@ class Home extends React.Component {
     this.setState({videoToggle: !this.state.videoToggle})
   }
 
+  toggleDropdown = (dropName) =>{
+    this.setState({[dropName]: !this.state[dropName] })
+  }
+
   componentDidMount() {
 
   }

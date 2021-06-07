@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
-import Header from '../../Components/ExpertHeader'
+import Header from '../../Components/UserHeader'
 import Slider from "react-slick";
 // import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
@@ -120,7 +120,7 @@ class UserProfile extends React.Component {
                       </div>
 
                       <div className="user_account_card">
-                        <Link to="social_media_verification.php" className="d-flex justify-content-between align-items-center">
+                        <Link to="social-media" className="d-flex justify-content-between align-items-center">
                           <div>
                             <h3 className="f20 f600 clr_black mb-2">Social Media Verification</h3>
                             <p className="f14 f400 clr_grey">Connect your social media account</p>
@@ -132,7 +132,7 @@ class UserProfile extends React.Component {
                       </div>
 
                       <div className="user_account_card">
-                        <Link to="setting.php" className="d-flex justify-content-between align-items-center">
+                        <Link to="/setting" className="d-flex justify-content-between align-items-center">
                           <div>
                             <h3 className="f20 f600 clr_black mb-2">Settings</h3>
                             <p className="f14 f400 clr_grey">Notifications, Change Password.</p>
@@ -144,7 +144,7 @@ class UserProfile extends React.Component {
                       </div>
 
                       <div className="user_account_card">
-                        <Link to="support.php" className="d-flex justify-content-between align-items-center">
+                        <Link to="/support" className="d-flex justify-content-between align-items-center">
                           <div>
                             <h3 className="f20 f600 clr_black mb-2">Support</h3>
                             <p className="f14 f400 clr_grey">How It Works, Help Center, Terms of Service</p>
@@ -173,7 +173,7 @@ class UserProfile extends React.Component {
                       </div>
 
                       <div className="user_account_card">
-                        <Link to="deactivate_account_1.php" className="d-flex justify-content-between align-items-center">
+                        <Link to="/deactivate-account" className="d-flex justify-content-between align-items-center">
                           <div>
                             <h3 className="f20 f600 clr_black mb-2">Deactivate Account</h3>
                             <p className="f14 f400 clr_grey">Basic Information, Topics, Photo, Become an expert.</p>

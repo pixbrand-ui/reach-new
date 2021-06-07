@@ -10,7 +10,19 @@ import Timezone from './Views/Timezone'
 import InterestedTopic from './Views/InterestedTopic'
 import PaymentBilling from './Views/PaymentBilling'
 import PaymentMethod from './Views/PaymentMethod'
+import BillingAddress from './Views/BillingAddress'
+import PayoutDetails from './Views/PayoutDetails'
+import UnderMaintenance from './Views/UnderMaintenance'
+import SocialMedia from './Views/SocialMedia'
+import UserSetting from './Views/UserSetting'
+import Notification from './Views/Notification'
+import PromotionalOffers from './Views/PromotionalOffers'
+import ChangePassword from './Views/ChangePassword'
+import Support from './Views/Support'
+import DeactivateAccount from './Views/DeactivateAccount'
 
+
+import Error from './Views/Error'
 
 import Footer from 'Components/Footer'
 
@@ -50,6 +62,12 @@ class App extends React.Component{
                 <Route path={'/interested-topic'} exact component={(props) => <InterestedTopic {...props} />} />
                 <Route path={'/payment-billing'} exact component={(props) => <PaymentBilling {...props} />} />
                 <Route path={'/payment-method'} exact component={(props) => <PaymentMethod {...props} />} />
+                <Route path={'/billing-address'} exact component={(props) => <BillingAddress {...props} />} />
+                <Route path={'/payout-details'} exact component={(props) => <PayoutDetails {...props} />} />
+                <Route path={'/under-maintenance'} exact component={(props) => <UnderMaintenance {...props} />} />
+                <Route path={'/social-media'} exact component={(props) => <SocialMedia {...props} />} />
+
+                <Route path={'*'} exact component={(props) => <Error {...props} />} />
               </Switch>
             </ScrollToTop>
 

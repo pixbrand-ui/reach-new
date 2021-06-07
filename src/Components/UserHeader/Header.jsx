@@ -97,7 +97,7 @@ class Header extends React.Component {
 
                         {
                           this.state.filterList ? 
-                          <span><img src={Images.cross.default} alt="" className="cancel_btn" /></span>
+                          <span><img src={Images.cross.default} alt="" className="cancel_btn" onClick={()=> this.openDropdown('filterList')} /></span>
                           :
                           <span><img src={Images.search_icon.default} alt="" className="w-100 search_btn" /></span>
                         }
@@ -556,7 +556,7 @@ class Header extends React.Component {
 
                         {
                           this.state.filterList ? 
-                          <span><img src={Images.cross.default} alt="" className="cancel_btn" /></span>
+                          <span><img src={Images.cross.default} alt="" className="cancel_btn" onClick={()=> this.openDropdown('filterList')} /></span>
                           :
                           <span><img src={Images.search_icon.default} alt="" className="w-100 search_btn" /></span>
                         }
