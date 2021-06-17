@@ -26,7 +26,7 @@ class Footer extends React.Component{
                         <div className="row">
                             <div className="col-12 col-sm-6 col-lg-3">
                                 <div className="footer_logo">
-                                    <Link to="index.php"><img src={Images.footer_logo.default} alt="" className="w-100" /></Link>
+                                    <Link to="/"><img src={Images.footer_logo.default} alt="" className="w-100" /></Link>
                                 </div>
                             </div>
                             <div className="col-6 col-sm-6 col-lg-3">

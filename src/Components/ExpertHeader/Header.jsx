@@ -10,13 +10,32 @@ class Header extends React.Component {
     super(props);
     this.state = {
       technology_dropdown: false,
-      filterList: false
+      filterList: false,
+      scrollHeaderClass: 'top',
+      headerLogo: 'header',
+      scrollSearchBox: 'show',
     }
   }
 
 
   componentDidMount() {
+    window.addEventListener('scroll', () => {
+      let scrollHeaderClass = 'bg_white';
+      let headerLogo  = 'footer';
+      let scrollSearchBox  = 'hide';
 
+      if(window.scrollY === 0){
+        scrollHeaderClass = 'top';
+        headerLogo = 'header';
+        scrollSearchBox = 'show';
+      }
+      
+      this.setState({ scrollHeaderClass , headerLogo , scrollSearchBox});
+   });
+  }
+
+  componentWillUnmount(){
+    // window.removeEventListener("scroll");
   }
 
   openDropdown = (dropName) => {
@@ -26,12 +45,10 @@ class Header extends React.Component {
 
   render() {
 
-
-
     return (
       <React.Fragment>
 
-        <header id="header_sec" className="header_sec bg_dark_green border_b_none">
+        <header id="header_sec" className={`header_sec bg_dark_green border_b_none ${this.state.scrollHeaderClass}`}>
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -40,7 +57,12 @@ class Header extends React.Component {
                 <div className={`sub_menu_closer ${this.state.technology_dropdown ? 'd-block' : ''}`} onClick={()=>this.openDropdown('technology_dropdown')}></div>
 
                   <div className="header_logo mob_order_2">
-                    <Link to="/"><img src={Images.logo.default} alt="" className="w-100" /></Link>
+                    {
+                      this.state.headerLogo == 'header' ?
+                      <Link to="/"><img src={Images.logo.default} alt="" className="w-100 hr" /></Link>
+                      :
+                      <Link to="/"><img src={Images.footer_logo.default} alt="" className="w-100 fr" /></Link>
+                    }
                   </div>
 
                   <div className="wrapper d-flex align-items-center mob_order_3">
@@ -60,9 +82,9 @@ class Header extends React.Component {
                                 <li><Link to="/" className="dropdown-item">Start-ups</Link></li>
                                 <li><Link to="/" className="dropdown-item">SMM</Link></li>
                                 <li>
-                                  <Link className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
+                                  <button className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
                                     Technology <i className='fa fa-chevron-right sub_drop_icon'></i>
-                                  </Link>
+                                  </button>
                                 </li>
                                 <li><Link to="/" className="dropdown-item">Other menu</Link></li>
                                 <li><Link to="/" className="dropdown-item">Other menu</Link></li>
@@ -497,7 +519,7 @@ class Header extends React.Component {
 
                 </div>
 
-                <div className="header_box_2 mt-3">
+                <div className={`header_box_2 mt-3 ${this.state.scrollSearchBox}`}>
                   <div className={`sub_menu_closer ${this.state.technology_dropdown ? 'd-block' : ''}`} onClick={()=>this.openDropdown('technology_dropdown')}></div>
 
                   <div className="categories mb-3 p-0">
@@ -515,9 +537,9 @@ class Header extends React.Component {
                             <li><Link to="/" className="dropdown-item">Start-ups</Link></li>
                             <li><Link to="/" className="dropdown-item">SMM</Link></li>
                             <li>
-                              <Link className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
+                              <button className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
                                 Technology <i className='fa fa-chevron-right sub_drop_icon'></i>
-                              </Link>
+                              </button>
                             </li>
                             <li><Link to="/" className="dropdown-item">Other menu</Link></li>
                             <li><Link to="/" className="dropdown-item">Other menu</Link></li>

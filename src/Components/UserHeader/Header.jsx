@@ -12,12 +12,31 @@ class Header extends React.Component {
       technology_dropdown: false,
       filterList: false,
       mobDrawer: false,
+      scrollHeaderClass: 'top',
+      headerLogo: 'header',
+      scrollSearchBox: 'show',
     }
   }
 
 
   componentDidMount() {
+    window.addEventListener('scroll', () => {
+      let scrollHeaderClass = 'bg_white';
+      let scrollSearchBox  = 'hide';
+      let headerLogo  = 'footer';
+      
+      if(window.scrollY === 0){
+        scrollHeaderClass = 'top';
+        headerLogo = 'header';
+        scrollSearchBox = 'show';
+      }
+      
+      this.setState({ scrollHeaderClass , headerLogo , scrollSearchBox });
+   });
+  }
 
+  componentWillUnmount(){
+    // window.removeEventListener("scroll");
   }
 
   openDropdown = (dropName) => {
@@ -32,7 +51,7 @@ class Header extends React.Component {
     return (
       <React.Fragment>
 
-        <header id="header_sec" className="header_sec bg_dark_green border_b_none">
+        <header id="header_sec" className={`header_sec bg_dark_green border_b_none ${this.state.scrollHeaderClass}`}>
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -41,7 +60,12 @@ class Header extends React.Component {
                 <div className={`sub_menu_closer ${this.state.technology_dropdown ? 'd-block' : ''}`} onClick={()=>this.openDropdown('technology_dropdown')}></div>
 
                   <div className="header_logo mob_order_2">
-                    <Link to="/"><img src={Images.logo.default} alt="" className="w-100" /></Link>
+                    {
+                      this.state.headerLogo == 'header' ?
+                      <Link to="/"><img src={Images.logo.default} alt="" className="w-100 hr" /></Link>
+                      :
+                      <Link to="/"><img src={Images.footer_logo.default} alt="" className="w-100 fr" /></Link>
+                    }
                   </div>
 
                   <div className="wrapper d-flex align-items-center mob_order_3">
@@ -61,9 +85,9 @@ class Header extends React.Component {
                                 <li><Link to="/" className="dropdown-item">Start-ups</Link></li>
                                 <li><Link to="/" className="dropdown-item">SMM</Link></li>
                                 <li>
-                                  <Link className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
+                                  <button className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
                                     Technology <i className='fa fa-chevron-right sub_drop_icon'></i>
-                                  </Link>
+                                  </button>
                                 </li>
                                 <li><Link to="/" className="dropdown-item">Other menu</Link></li>
                                 <li><Link to="/" className="dropdown-item">Other menu</Link></li>
@@ -164,21 +188,21 @@ class Header extends React.Component {
 
                       <div className="d-block d-lg-none">
                         <ul className="categories_links">
-                          <li><a className="dropdown-item" href="/">Entrepreneurship</a></li>
+                          <li><Link className="dropdown-item" to="/">Entrepreneurship</Link></li>
 
-                          <li><a className="dropdown-item" href="category_listing_page.php">Digital marketing</a></li>
+                          <li><Link className="dropdown-item" to="category_listing_page.php">Digital marketing</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Start-ups</a></li>
+                          <li><Link className="dropdown-item" to="/">Start-ups</Link></li>
 
-                          <li><a className="dropdown-item" href="/">SMM</a></li>
+                          <li><Link className="dropdown-item" to="/">SMM</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Technology</a></li>
+                          <li><Link className="dropdown-item" to="/">Technology</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Other menu</a></li>
+                          <li><Link className="dropdown-item" to="/">Other menu</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Other menu</a></li>
+                          <li><Link className="dropdown-item" to="/">Other menu</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Other menu</a></li>
+                          <li><Link className="dropdown-item" to="/">Other menu</Link></li>
                         </ul>
                       </div>
 
@@ -187,8 +211,8 @@ class Header extends React.Component {
 
                         <UncontrolledButtonDropdown classNameName="">
                             <DropdownToggle classNameName="drop_toggle">
-                            <div className="user_img_info notification_drop" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <a className="notification_bell"><i className="far fa-bell"><span className="count clr_white f12">2</span></i></a>
+                            <div className="user_img_info notification_drop">
+                              <Link className="notification_bell"><i className="far fa-bell"><span className="count clr_white f12">2</span></i></Link>
                             </div>
                             </DropdownToggle>
                             <DropdownMenu className='user_notification_dropdown expert_noti_dropdown'>
@@ -196,97 +220,97 @@ class Header extends React.Component {
                                 <ul>
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</a>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</a>
+                                          <Link to="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</Link>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</Link>
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</a>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</a>
+                                          <Link to="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</Link>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</Link>
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
@@ -304,51 +328,51 @@ class Header extends React.Component {
 
                             <DropdownToggle classNameName="drop_toggle">
                               <div className="user_img_info  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <Link className="d-flex align-items-center">
+                                <button className="d-flex align-items-center">
                                   <div className="user_img">
                                     <img src={Images.user_img.default} alt="" className="m-0" />
                                   </div>
                                   <div className="user_info ms-3">
                                     <h6 className="f16 f500 clr_white m-0 d-flex align-items-end">Alexjender <i className="fas fa-chevron-down ms-2"></i> </h6>
                                   </div>
-                                </Link>
+                                </button>
                               </div>
                             </DropdownToggle>
 
                             <DropdownMenu className='user_account_dropdown no_dropdown'>
                               <ul>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="user_profile.php">Account</Link>
+                                  <Link className="dropdown-item f16 f400" to="">Account</Link>
                                 </li>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="favourite_page_list_view.php">Favorite</Link>
+                                  <Link className="dropdown-item f16 f400" to="">Favorite</Link>
                                 </li>
                                 <li>
                                   <Link className="dropdown-item f16 f400" to="/">Messages</Link>
                                 </li>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="calls_user_side.php">Call</Link>
+                                  <Link className="dropdown-item f16 f400" to="">Call</Link>
                                 </li>
                               </ul>
 
                               <ul>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="edit_profile.php">Edit Profile</Link>
+                                  <Link className="dropdown-item f16 f400" to="/edit-profile">Edit Profile</Link>
                                 </li>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="setting.php">Setting</Link>
-                                </li>
-                              </ul>
-
-                              <ul>
-                                <li>
-                                  <Link className="dropdown-item f16 f400" to="support.php">Support</Link>
+                                  <Link className="dropdown-item f16 f400" to="/setting">Setting</Link>
                                 </li>
                               </ul>
 
                               <ul>
                                 <li>
-                                  <Link to="index.php" className="dropdown-item f16 f400">Logout</Link>
+                                  <Link className="dropdown-item f16 f400" to="/support">Support</Link>
+                                </li>
+                              </ul>
+
+                              <ul>
+                                <li>
+                                  <Link to="/" className="dropdown-item f16 f400">Logout</Link>
                                 </li>
                               </ul>
                             </DropdownMenu>
@@ -502,7 +526,7 @@ class Header extends React.Component {
 
                 </div>
 
-                <div className="header_box_2 mt-3">
+                <div className={`header_box_2 mt-3 ${this.state.scrollSearchBox}`}>
                   <div className={`sub_menu_closer ${this.state.technology_dropdown ? 'd-block' : ''}`} onClick={()=>this.openDropdown('technology_dropdown')}></div>
 
                   <div className="categories mb-3 p-0">

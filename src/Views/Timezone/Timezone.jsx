@@ -36,7 +36,7 @@ class Timezone extends React.Component {
 
         <Header></Header>
 
-        <section id="basic_info_sec" class="basic_info_sec">
+        <section id="basic_info_sec" className="basic_info_sec">
           <div class="container">
             <div class="row">
 
@@ -44,22 +44,22 @@ class Timezone extends React.Component {
                 <button className="f16 f400 clr_black mb-4" onClick={()=> this.goBack()}>
                   <i className="fa fa-chevron-left me-2"></i>Go back
                 </button>
-                <h2 class="f32 f600 clr_black">
+                <h2 className="f32 f600 clr_black">
                   Timezone
                 </h2>
               </div>
 
-              <div class="col-12 col-lg-7">
+              <div className="col-12 col-lg-7">
 
-                <div class="cmn_white_part">
-                  <div class="row mx-0">
+                <div className="cmn_white_part">
+                  <div className="row mx-0">
 
-                    <form action="javascript:void(0)" class="w-100">
+                    <form action="javascript:void(0)" className="w-100">
 
-                        <div class="col-12 mb-2">
-                          <div class="custom_select_icon">
-                            <label for="bio" class="f16 f400 clr_black mb-2 cursor_pointer">Your Timezone</label>
-                            <select name="" id="" class="theme_input theme_input_2 cursor_pointer">
+                        <div className="col-12 mb-2">
+                          <div className="custom_select_icon">
+                            <label for="bio" className="f16 f400 clr_black mb-2 cursor_pointer">Your Timezone</label>
+                            <select name="" id="" className="theme_input theme_input_2 cursor_pointer">
                                 <option value="0">(GMT-08:00) Pacific Time (US & Canada)</option>
                                 <option value="0">(GMT-08:00) Pacific Time (US & Canada)</option>
                                 <option value="0">(GMT-08:00) Pacific Time (US & Canada)</option>
@@ -67,9 +67,9 @@ class Timezone extends React.Component {
                           </div>
                         </div>
 
-                        <div class="col-12">
-                          <div class="d-flex justify-content-end">
-                            <Link to='/' class="theme_dark_btn f18 f600">Save</Link>
+                        <div className="col-12">
+                          <div className="d-flex justify-content-end">
+                            <Link to='/' className="theme_dark_btn f18 f600">Save</Link>
                           </div>
                         </div>
 
@@ -79,9 +79,9 @@ class Timezone extends React.Component {
                 </div>
               </div>
 
-              <div class="col-12 col-lg-5">
+              <div className="col-12 col-lg-5">
                 
-                <img src={Images.timezone_img.default} class="w-100" />
+                <img src={Images.timezone_img.default} className="w-100" />
 
               </div>
                       

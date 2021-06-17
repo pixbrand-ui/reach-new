@@ -12,12 +12,29 @@ class Header extends React.Component {
     this.state = {
       technology_dropdown: false,
       showPassword: false,
+      scrollHeaderClass: 'top',
+      headerLogo: 'header',
+      scrollSearchBox: 'show',
     }
   }
 
 
   componentDidMount() {
+    window.addEventListener('scroll', () => {
+      let scrollHeaderClass = 'bg_white';
+      let headerLogo  = 'footer';
+      let scrollSearchBox  = 'hide';
+      if(window.scrollY === 0){
+        scrollHeaderClass = 'top';
+        headerLogo = 'header'
+        scrollSearchBox = 'show'
+      }
+      this.setState({ scrollHeaderClass , headerLogo , scrollSearchBox});
+   });
+  }
 
+  componentWillUnmount(){
+    // window.removeEventListener("scroll");
   }
 
   openDropdown = (dropName) => {
@@ -40,12 +57,10 @@ class Header extends React.Component {
 
   render() {
 
-
-
     return (
       <React.Fragment>
 
-        <header id="header_sec" className="header_sec bg_dark_green">
+        <header id="header_sec" className={`header_sec bg_dark_green ${this.state.scrollHeaderClass}`}>
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -53,7 +68,12 @@ class Header extends React.Component {
                 <div className="header_box">
 
                   <div className="header_logo mob_order_2">
-                    <Link to="/"><img src={Images.logo.default} alt="" className="w-100" /></Link>
+                    {
+                      this.state.headerLogo == 'header' ?
+                      <Link to="/"><img src={Images.logo.default} alt="" className="w-100 hr" /></Link>
+                      :
+                      <Link to="/"><img src={Images.footer_logo.default} alt="" className="w-100 fr" /></Link>
+                    }
                   </div>
 
                   <div className="wrapper d-flex align-items-center mob_order_3">
@@ -74,9 +94,9 @@ class Header extends React.Component {
                                 <li><Link to="/" className="dropdown-item">Start-ups</Link></li>
                                 <li><Link to="/" className="dropdown-item">SMM</Link></li>
                                 <li>
-                                  <Link className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
+                                  <button className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
                                     Technology <i className='fa fa-chevron-right sub_drop_icon'></i>
-                                  </Link>
+                                  </button>
                                 </li>
                                 <li><Link to="/" className="dropdown-item">Other menu</Link></li>
                                 <li><Link to="/" className="dropdown-item">Other menu</Link></li>
@@ -164,8 +184,8 @@ class Header extends React.Component {
 
                   </div>
 
+                  <div className={`header_link_closer ${this.state.mobDrawer ? 'd-block' : ''}`} onClick={()=> this.openDropdown('mobDrawer')}></div>
                   <div class={`header_link ${this.state.mobDrawer ? 'show' : ''}`}>
-                    <div className={`closer ${this.state.mobDrawer ? 'd-block' : ''}`} onClick={()=> this.openDropdown('mobDrawer')}></div>
                       <button class={`fas fa-times toggle_drawer drawer_closer clr_white ms-auto`} onClick={()=> this.openDropdown('mobDrawer')}></button>
                       <ul>
                           <li class="main_links">
@@ -178,10 +198,10 @@ class Header extends React.Component {
                               <Link to="/">Blog</Link>
                           </li>
                           <li>
-                              <Link class="theme_outline_btn" onClick={()=> this.openModal('loginModal')}>Login <img src={Images.login_key.default} alt="" /></Link>
+                              <a href="javascript:void(0)" class="theme_outline_btn" onClick={()=> this.openModal('loginModal')}>Login <img src={Images.login_key.default} alt="" /></a>
                           </li>
                           <li class="pe-0">
-                              <Link class="theme_dark_btn" onClick={()=> this.openModal('signupModal')}>Sign up <img src={Images.right_arrow.default} alt="" /></Link>
+                              <a href="javascript:void(0)" class="theme_dark_btn" onClick={()=> this.openModal('signupModal')}>Sign up <img src={Images.right_arrow.default} alt="" /></a>
                           </li>
 
                           <div class="d-block d-lg-none">
@@ -218,7 +238,7 @@ class Header extends React.Component {
 
                 </div>
 
-                <div className="header_box_2 mt-3">
+                <div className={`header_box_2 mt-3 ${this.state.scrollSearchBox}`}>
 
                   <div className={`sub_menu_closer ${this.state.technology_dropdown ? 'd-block' : ''}`} onClick={()=>this.openDropdown('technology_dropdown')}></div>
 
@@ -237,9 +257,9 @@ class Header extends React.Component {
                                 <li><Link to="/" className="dropdown-item">Start-ups</Link></li>
                                 <li><Link to="/" className="dropdown-item">SMM</Link></li>
                                 <li>
-                                  <Link className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
+                                  <button className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
                                     Technology <i className='fa fa-chevron-right sub_drop_icon'></i>
-                                  </Link>
+                                  </button>
                                 </li>
                                 <li><Link to="/" className="dropdown-item">Other menu</Link></li>
                                 <li><Link to="/" className="dropdown-item">Other menu</Link></li>
@@ -394,7 +414,7 @@ class Header extends React.Component {
                           <button class="clr_green f15 f500 d-block w-100 text-center" onClick={()=> this.openCloseModal('loginModal' , 'forgotModal')}>Forogot Password ?</button>
 
                           <p class="f12 f400 clr_grey text-center margin_lr_minus_50 mt-5">
-                              By signing up, you agree to our <a href="javascript:void(0)" class="text_underline clr_grey">Terms of Use</a> and <a href="javascript:void(0)" class="text_underline clr_grey">Privacy Policy</a>,
+                              By signing up, you agree to our <Link href="/" class="text_underline clr_grey">Terms of Use</Link> and <Link to="/" class="text_underline clr_grey">Privacy Policy</Link>,
                               and you confirm that you're 18 years old or over.
                           </p>
                     </div>

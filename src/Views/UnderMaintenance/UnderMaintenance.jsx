@@ -36,19 +36,19 @@ class UnderMaintenance extends React.Component {
 
         <Header />
 
-        <section id="error_msg_sec" class="error_msg_sec bg_dark_green maintenance_sec">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-8 col-lg-6">
-                        <div class="error-content text-center">
-                            <div class="error_heading d-flex align-items-center justify-content-center mb-5">
-                                <img src={Images.maintenance.default} alt="" className='maintenance_img' />
+        <section id="error_msg_sec" className="error_msg_sec maintenance_sec">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-12 col-md-8 col-lg-6">
+                        <div className="error-content text-center">
+                            <div className="error_heading d-flex align-items-center justify-content-center mb-5">
+                              <img src={Images.maintenance.default} alt="" className='maintenance_img' />
                             </div>
-                            <h2 class="clr_white f32 f600 text-center m_b_25">
-                                This site is under maintenance
+                            <h2 className="clr_black f32 f600 text-center m_b_25">
+                              This site is under maintenance
                             </h2>
-                            <h5 class="f24 f500 clr_white opc_07">
-                                We're preparing to serve you better
+                            <h5 className="f24 f500 clr_black opc_07">
+                              We're preparing to serve you better
                             </h5>
                         </div>
                     </div>

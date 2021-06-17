@@ -35,10 +35,10 @@ class Home extends React.Component {
         {image: Images.explore_card_2_dark.default , title: 'Digital marketing'},
         {image: Images.explore_card_3_dark.default , title: 'Start-ups' , imgClass: 'rocket_img'},
         {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing'},
+        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
+        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
+        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
+        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
       ],
 
       testi_slider: [

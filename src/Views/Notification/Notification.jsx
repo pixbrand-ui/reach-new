@@ -36,95 +36,95 @@ class Notification extends React.Component {
 
         <Header />
 
-        <section id="notification_sec" class="social_media_verification edit_profile_sec">
-          <div class="container">
-            <div class="row">
+        <section id="notification_sec" className="social_media_verification edit_profile_sec">
+          <div className="container">
+            <div className="row">
 
-              <div class="col-12">
+              <div className="col-12">
                 <button className="f16 f400 clr_black mb-4" onClick={()=> this.goBack()}>
                   <i className="fa fa-chevron-left me-2"></i>Go back
                 </button>
-                <h2 class="f32 f600 clr_black mb-4">
+                <h2 className="f32 f600 clr_black mb-4">
                   Notifications
                 </h2>
               </div>
 
-              <div class="col-12 col-lg-7">
+              <div className="col-12 col-lg-7">
 
-                <div class="cmn_white_sec">
-                    <p class="f20 f600 clr_black mb-3">Emails</p>
+                <div className="cmn_white_sec">
+                    <p className="f20 f600 clr_black mb-3">Emails</p>
                     <form action="javascript:void(0)" method="post">
-                      <div class="social_media_row notification_row">
-                          <div class="social_labels d-flex align-items-center">
-                              <span class="f16 f400 clr_black">Gmail</span>
+                      <div className="social_media_row notification_row">
+                          <div className="social_labels d-flex align-items-center">
+                              <span className="f16 f400 clr_black">Gmail</span>
                           </div>
 
-                          <div class="d-flex align-items-center">
-                              <div class="">
-                                  <label class="switch custom_switch">
+                          <div className="d-flex align-items-center">
+                              <div className="">
+                                  <label className="switch custom_switch">
                                       <input type="checkbox" />
-                                      <span class="slider"></span>
+                                      <span className="slider"></span>
                                   </label>
                               </div>
                           </div>
                       </div>
 
-                      <div class="social_media_row notification_row">
-                          <div class="social_labels d-flex align-items-center">
-                              <span class="f16 f400 clr_black">Recommendations</span>
+                      <div className="social_media_row notification_row">
+                          <div className="social_labels d-flex align-items-center">
+                              <span className="f16 f400 clr_black">Recommendations</span>
                           </div>
 
-                          <div class="d-flex align-items-center">
-                              <div class="">
-                                  <label class="switch custom_switch">
+                          <div className="d-flex align-items-center">
+                              <div className="">
+                                  <label className="switch custom_switch">
                                       <input type="checkbox" />
-                                      <span class="slider"></span>
+                                      <span className="slider"></span>
                                   </label>
                               </div>
                           </div>
                       </div>
 
-                      <div class="social_media_row notification_row">
-                          <div class="social_labels d-flex align-items-center">
-                              <span class="f16 f400 clr_black">Charles Updates</span>
+                      <div className="social_media_row notification_row">
+                          <div className="social_labels d-flex align-items-center">
+                              <span className="f16 f400 clr_black">Charles Updates</span>
                           </div>
 
-                          <div class="d-flex align-items-center">
-                              <div class="">
-                                  <label class="switch custom_switch">
+                          <div className="d-flex align-items-center">
+                              <div className="">
+                                  <label className="switch custom_switch">
                                       <input type="checkbox" />
-                                      <span class="slider"></span>
+                                      <span className="slider"></span>
                                   </label>
                               </div>
                           </div>
                       </div>
 
-                      <p class="f20 f600 clr_black">SMS</p>
-                      <div class="social_media_row notification_row">
-                          <div class="social_labels d-flex align-items-center">
-                              <span class="f16 f400 clr_black">Call Management</span>
+                      <p className="f20 f600 clr_black">SMS</p>
+                      <div className="social_media_row notification_row">
+                          <div className="social_labels d-flex align-items-center">
+                              <span className="f16 f400 clr_black">Call Management</span>
                           </div>
 
-                          <div class="d-flex align-items-center">
-                              <div class="">
-                                  <label class="switch custom_switch">
+                          <div className="d-flex align-items-center">
+                              <div className="">
+                                  <label className="switch custom_switch">
                                       <input type="checkbox" />
-                                      <span class="slider"></span>
+                                      <span className="slider"></span>
                                   </label>
                               </div>
                           </div>
                       </div>
 
-                      <div class="social_media_row notification_row">
-                          <div class="social_labels d-flex align-items-center">
-                              <span class="f16 f400 clr_black">Call Reminders</span>
+                      <div className="social_media_row notification_row">
+                          <div className="social_labels d-flex align-items-center">
+                              <span className="f16 f400 clr_black">Call Reminders</span>
                           </div>
 
-                          <div class="d-flex align-items-center">
-                              <div class="">
-                                  <label class="switch custom_switch">
+                          <div className="d-flex align-items-center">
+                              <div className="">
+                                  <label className="switch custom_switch">
                                       <input type="checkbox" />
-                                      <span class="slider"></span>
+                                      <span className="slider"></span>
                                   </label>
                               </div>
                           </div>
@@ -133,9 +133,9 @@ class Notification extends React.Component {
                 </div>
               </div>
 
-              <div class="col-12 col-lg-5">
+              <div className="col-12 col-lg-5">
                 
-                <img src={Images.notifications.default} class="w-100" />
+                <img src={Images.notifications.default} className="w-100" />
 
               </div>
             </div>
