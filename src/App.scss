@@ -4292,3 +4292,34 @@ body .slick-disabled{
   padding: 70px 0;
   background-color: #7A7D8510;
 }
+
+// Datepicker
+
+.customDatepicker input{
+  display: none;
+}
+
+.customDatepicker .rdtPicker{
+  position: unset;
+  display: block;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.customDatepicker .rdtPrev span, 
+.customDatepicker .rdtNext span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.customDatepicker .rdtPicker td, 
+.customDatepicker .rdtPicker th{
+  height: 60px;
+}
+.customDatepicker .rdtPicker td.rdtActive, 
+.customDatepicker .rdtPicker td:hover{
+  background-color: var(--green);
+  color: #fff;
+}

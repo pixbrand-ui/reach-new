@@ -1,13 +1,13 @@
-import React, { Component   } from 'react';
+import React, { Component } from 'react';
 // import { Row, Col, Container } from 'reactstrap';
 // import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 import Header from '../../Components/UserHeader'
 // import StarRatings from 'react-star-ratings';
-// import Slider from "react-slick";
 // import {CommonNotifyModal} from 'Modals';
-// import TagsInput from 'react-tagsinput'
-// import "react-tagsinput/react-tagsinput.css";
+
+import Datetime from 'react-datetime';
+import "react-datetime/css/react-datetime.css";
 
 import { Images } from 'Constants';
 
@@ -16,9 +16,9 @@ class ExpertAvailability extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        value: new Date().toISOString()
 
-    }
+    };
+
   }
 
   goBack = () =>{
@@ -33,9 +33,9 @@ class ExpertAvailability extends React.Component {
   componentWillUnmount() {
     
   }
-
   
   render() {
+      
 
     return (
       <React.Fragment>
@@ -63,6 +63,9 @@ class ExpertAvailability extends React.Component {
                                 <div class="col-12 col-md-12 col-lg-7 col-lg-6 brdr_r_grey">
                                 
                                     {/* ----------------Calendar------------------- */}
+                                    <Datetime 
+                                        className='customDatepicker'
+                                    />
                                     
                                     <div class="custom_check_2 mb-3">
                                         <input type="checkbox" id="html" />
