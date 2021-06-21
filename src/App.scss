@@ -1947,7 +1947,7 @@ select.theme_input_2{
   margin: 0px 8px;
 }
 
-.detail_expert_modal .modal-dialog{
+.detail_expert_modal.modal-dialog{
   max-width: 40%;
 }
 .detail_expert_modal .sinle_expert_profile{
@@ -3424,7 +3424,7 @@ body .payout_details_accordion .accordion-button::after{
   display: inline-flex;
   padding: 10px;
 }
-.review_btn a.cmn_btn{
+.review_btn .cmn_btn{
   width: 50%;
   min-height: 45px;
 }
@@ -4278,4 +4278,17 @@ body .slick-disabled{
 }
 .expert_listing.edit_profile_sec .row > div:nth-child(3){
   padding-left: calc(var(--bs-gutter-x) / 2);
+}
+
+.related_expert_btns a{
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+.rel_expert_big_btn a{
+  padding: 5px;
+}
+.related_topics_grid{
+  margin-top: 50px;
+  padding: 70px 0;
+  background-color: #7A7D8510;
 }

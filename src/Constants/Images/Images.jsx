@@ -112,6 +112,7 @@ const Images = {
     add_big_icon: require('../../assets/img/add_big_icon.png'),
     expertise_profile: require('../../assets/img/expertise_profile.png'),
     expert_listing: require('../../assets/img/expert_listing.png'),
+    phone_icon_dark: require('../../assets/img/phone_icon_dark.png'),
 }
   
 export default Images

@@ -43,6 +43,9 @@ import ExpertList from './Views/ExpertList'
 import ExpertEdit from './Views/ExpertEdit'
 import ExpertHourlyRate from './Views/ExpertHourlyRate'
 import ExpertAvailability from './Views/ExpertAvailability'
+import ExpertPayoutDetails from './Views/ExpertPayoutDetails'
+import ExpertSingleList from './Views/ExpertSingleList'
+import ProvideCall from './Views/ProvideCall'
 
 
 import Error from './Views/Error'
@@ -118,6 +121,9 @@ class App extends React.Component{
                 <Route path={'/expert-edit'} exact component={(props)=> <ExpertEdit {...props} />} />
                 <Route path={'/hourly-rate'} exact component={(props)=> <ExpertHourlyRate {...props} />} />
                 <Route path={'/availability'} exact component={(props)=> <ExpertAvailability {...props} />} />
+                <Route path={'/expert-payout'} exact component={(props)=> <ExpertPayoutDetails {...props} />} />
+                <Route path={'/expert-single-list'} exact component={(props)=> <ExpertSingleList {...props} />} />
+                <Route path={'/provide-call'} exact component={(props)=> <ProvideCall {...props} />} />
                   
 
                 <Route path={'*'} exact component={(props) => <Error {...props} />} />

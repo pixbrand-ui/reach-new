@@ -382,13 +382,9 @@
     .banner_content h1.f60{
         font-size: 35px;
     }
-    .banner_big_btns{
-        /* text-align: center; */
-    }
     .banner_big_btns a{
         padding: 10px 15px;
-        margin-bottom: 5px;
-        /* margin-left: 0px !important; */
+        margin-bottom: 5px; 
     }
     h2.f32{
         font-size: 24px;

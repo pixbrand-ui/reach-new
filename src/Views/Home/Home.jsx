@@ -49,10 +49,6 @@ class Home extends React.Component {
         {video: Images.pattern.default , poster: Images.test_video_poster.default , },
       ],
 
-
-
-      videoToggle: false,
-
     }
   }
 
@@ -66,12 +62,10 @@ class Home extends React.Component {
 
   componentWillUnmount = () => {
 
-  };
+  }
 
 
   render() {
-
-
 
     const browse_slider = {
       dots: false,
@@ -375,9 +369,9 @@ class Home extends React.Component {
 
                   <Slider {...testi_slider} classNameName="testi_slider cmn_slide_pdng ">
                     {
-                      this.state.testi_slider.map( (obj , i) => {
+                      this.state.testi_slider.map( (obj , key) => {
                           return(
-                            <div className="testi_slide cmn_slide_pdng">
+                            <div className="testi_slide cmn_slide_pdng" key={key}>
                                 <div className="row">
                                     <div className="col-12 col-md-6">
                                         <div className="testi_video video_wrapper">
@@ -389,7 +383,7 @@ class Home extends React.Component {
                                               />
                                             <button className="video_controller" onClick={()=> {this.toggleDropdown('videoToggle')}}>
                                               {
-                                                this.state.videoToggle ? 
+                                                this.state.videoToggle ?
                                                 <span><img src={Images.pause_icon.default} alt="" className="pause_btn video_btns"/></span>
                                                 :
                                                 <span><img src={Images.play_icon.default} alt="" className="play_btn video_btns ms-1"/></span>

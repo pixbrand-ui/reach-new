@@ -180,7 +180,9 @@ class SingleListing extends React.Component {
                                     <p className="f14 f400 clr_grey mb-2">Per minute</p>
                                     <Link to="/" className="theme_dark_btn f600  mb-2 w-100 clr_green">Request A Call <i className="fa fa-chevron-right ms-1"></i></Link>
                                     <button className="cmn_outline_grey_btn mb-2 w-100 f16 f600 clr_grey" onClick={()=> this.setState({favExpert: !this.state.favExpert})}>
-                                      Save to Favorites 
+                                      {
+                                        this.state.favExpert ?  'Removed From Favorites' : 'Save to Favorites'
+                                      } 
                                       <i className={`fa-heart ms-1 ${this.state.favExpert ? 'fas clr_red' : 'far'}`}></i>
                                     </button>
                                     <p className="clr_grey f14 f400 mb-2">Saved 19 times</p>
