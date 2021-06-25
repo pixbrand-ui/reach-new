@@ -1134,6 +1134,15 @@ select.theme_input_2{
 .video_controller:hover img{
   filter: brightness(0);
 }
+
+.video_controller.pause{
+  opacity: 0;
+}
+.video_wrapper:hover .video_controller.pause{
+  opacity: 1;
+}
+
+
 .testi_content{
   width: 70%;
   margin: 0px auto;
@@ -2042,6 +2051,9 @@ select.theme_input_2{
   display: block;
   padding: 8px 0;
 }
+.policy_topics li a{
+  cursor: pointer;
+}
 
 .policy_cmn_brdr{
   border-bottom: 1px solid #7a7d8529;
@@ -2061,6 +2073,8 @@ select.theme_input_2{
 .faq_cmn_banner{
   margin-top: 81px;
   padding: 60px 0;
+  background-size: cover;
+  background-position: center;
 }
 .faq_banner_input{
   background: #fff;
@@ -2176,15 +2190,16 @@ select.theme_input_2{
   font-size: 0;
 }
 
-.user_mem_tab a{
+.user_mem_tab button{
   min-width: 190px;
   padding-bottom: 5px;
+  border: none;
   border-bottom: 3px solid #7a7d852e;
   transition: var(--transition);
 }
 
-.user_mem_tab a.active,
-.user_mem_tab a:hover{
+.user_mem_tab button.active,
+.user_mem_tab button:hover{
   border-color: var(--green);
   color: var(--black);
 }
@@ -2768,8 +2783,12 @@ body .payout_details_accordion .accordion-button::after{
   border-radius: 7px;
   overflow: hidden;
   margin-bottom: 20px;
-  height: 180px;
+  height: 350px;
 }
+.blog_card.small .blog_img{
+  height: 300px;
+}
+
 .blog_card .blog_img img{
   height: 100%;
   object-fit: cover;
@@ -3492,9 +3511,9 @@ body .payout_details_accordion .accordion-button::after{
   border: 1px solid var(--light_grey);
   border-radius: 5px;
   display: flex;
-  /* flex-wrap: wrap; */
   position: relative;
   overflow: hidden;
+  height: 600px;
 }
 .chat_box .chat_list{
   width: 30%;
@@ -3526,7 +3545,7 @@ body .payout_details_accordion .accordion-button::after{
   padding: 10px;
 }
 .chat_list .chat_list_wrapper{
-  height: 600px;
+  height: calc(100% - 80px);
   overflow-y: hidden;
 }
 .chat_list .chat_list_wrapper:hover{
@@ -3570,7 +3589,6 @@ body .payout_details_accordion .accordion-button::after{
 
 .chat_view{
   width: 50%;
-  border-right: 1px solid var(--light_grey);
   position: relative;
   transition: var(--transition);
 }
@@ -3616,8 +3634,8 @@ body .payout_details_accordion .accordion-button::after{
 
 .chatting_sec{
   padding: 0px 15px;
-  padding-bottom: 70px;
-  height: 620px;
+  // padding-bottom: 70px;
+  height: calc(100% - 150px);
   overflow-y: auto;
 }
 
@@ -3664,6 +3682,7 @@ body .payout_details_accordion .accordion-button::after{
   width: 100%;
   bottom: 0;
 }
+
 .chat_input{
   width: 100%;
   display: flex;
@@ -3675,11 +3694,15 @@ body .payout_details_accordion .accordion-button::after{
   min-height: 45px;
   padding: 5px;
 }
+
+.chat_input textarea,
 .chat_input input{
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.chat_input textarea::placeholder,
 .chat_input input::placeholder{
   color: #7A7D85;
   opacity: 0.6;
@@ -3713,8 +3736,8 @@ body .payout_details_accordion .accordion-button::after{
 }
 
 .expertise_list_wrapper{
-  max-height: 180px;
-  overflow-y: auto;
+  // max-height: 180px;
+  // overflow-y: auto;
 }
 
 .expertise_list{
@@ -3830,6 +3853,8 @@ body .payout_details_accordion .accordion-button::after{
 .video_footer_opt .video_controls ul li{
   padding: 0px 10px;
 }
+
+.video_footer_opt .video_controls ul li button,
 .video_footer_opt .video_controls ul li a{
   display: flex;
   justify-content: center;
@@ -3839,12 +3864,18 @@ body .payout_details_accordion .accordion-button::after{
   border-radius: 100%;
   background: #000;
 }
+.video_footer_opt .video_controls ul li button img,
 .video_footer_opt .video_controls ul li a img{
   width: 20px;
 }
+.video_footer_opt .video_controls ul li button.call_dismiss,
 .video_footer_opt .video_controls ul li a.call_dismiss{
   background: #FF5857;
 }
+
+.video_footer_opt .video_controls ul li button.active,
+.video_footer_opt .video_controls ul li a.active,
+.video_footer_opt .video_controls ul li button:hover,
 .video_footer_opt .video_controls ul li a:hover{
   background: var(--green);
 }
@@ -3852,7 +3883,7 @@ body .payout_details_accordion .accordion-button::after{
 
 .video_call_sec .video_chat_sec{
   width: 0%;
-  display: none;
+  overflow: hidden;
   transition: var(--transition);
 }
 .video_call_sec .chatting_sec{
@@ -3864,7 +3895,7 @@ body .payout_details_accordion .accordion-button::after{
 }
 .video_chat_sec.show{
   width: 30%;
-  display: block;
+  overflow: auto;
 }
 
 /* ---------20April---------- */
@@ -3882,7 +3913,7 @@ body .payout_details_accordion .accordion-button::after{
 
 /* Select Time slot modal */
 
-.time_slot .modal-body{
+body .time_slot .modal-body{
   padding: 30px;
 }
 
@@ -4322,4 +4353,39 @@ body .slick-disabled{
 .customDatepicker .rdtPicker td:hover{
   background-color: var(--green);
   color: #fff;
+}
+
+.faq_accordion .toggle_btn{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--light_grey);
+  padding: 10px 0;
+  text-align: left;
+}
+.faq_accordion .toggle_btn:hover{
+  color: var(--black);
+}
+.faq_accordion .toggle_btn:focus{
+  outline: none;
+  box-shadow: none;
+  color: var(--black);
+}
+.faq_accordion .card{
+  background: transparent;
+  border: none;
+  padding: 0px;
+}
+.faq_accordion .card-body{
+  padding: 10px 0;
+  border-bottom: 1px solid var(--light_grey);
+}
+.user_information{
+  transition: var(--transition);
+}
+
+body.modal-open{
+  overflow-y: hidden;
 }

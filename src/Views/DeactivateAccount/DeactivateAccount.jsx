@@ -1,9 +1,6 @@
-import React, { useRef } from 'react';
-// import { Row, Col, Container } from 'reactstrap';
-// import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
+import React from 'react';
 import { Link } from "react-router-dom";
 import Header from '../../Components/IndexHeader'
-// import Slider from "react-slick";
 import {CommonNotifyModal , LoginModal} from 'Modals';
 import { Images } from 'Constants';
 

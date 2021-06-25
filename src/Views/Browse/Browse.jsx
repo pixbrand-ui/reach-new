@@ -1,11 +1,8 @@
-import React, { useRef } from 'react';
-// import { Row, Col, Container } from 'reactstrap';
+import React from 'react';
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 import Header from '../../Components/UserHeader'
 import StarRatings from 'react-star-ratings';
-// import Slider from "react-slick";
-// import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
 
 class Browse extends React.Component {

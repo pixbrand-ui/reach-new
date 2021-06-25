@@ -1,9 +1,6 @@
-import React, { useRef } from 'react';
-// import { Row, Col, Container } from 'reactstrap';
-// import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
+import React from 'react';
 import { Link } from "react-router-dom";
 import Header from '../../Components/UserHeader'
-// import Slider from "react-slick";
 import {CommonNotifyModal, LoginModal} from 'Modals';
 import { Images } from 'Constants';
 
@@ -68,7 +65,7 @@ class ChangePassword extends React.Component {
                             className="theme_input theme_grey_outline_input"
                             ref={(ip) => this.myInp1 = ip} />
 
-                            <span className="cursor_pointer toggle_password" onClick={()=> { this.openDropdown("showPassword1") ; this.myInp1.focus()}}>
+                            <span className="cursor_pointer toggle_password" onClick={()=> { this.openDropdown("showPassword1") ; this.myInp1.focus() }}>
                               {
                                 this.state.showPassword1 ? 
                                   <img src={Images.lock_show_icon.default} alt="" className="w_15 lock_show_icon" />

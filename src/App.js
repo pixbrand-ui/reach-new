@@ -46,6 +46,19 @@ import ExpertAvailability from './Views/ExpertAvailability'
 import ExpertPayoutDetails from './Views/ExpertPayoutDetails'
 import ExpertSingleList from './Views/ExpertSingleList'
 import ProvideCall from './Views/ProvideCall'
+import Blog from './Views/Blog'
+import SingleBlog from './Views/SingleBlog'
+import ContactUs from './Views/ContactUs'
+import Policy from './Views/Policy'
+import SinglePolicy from './Views/SinglePolicy'
+import TermsConditions from './Views/TermsConditions'
+import Faq from './Views/Faq'
+import FaqSearch from './Views/FaqSearch'
+import FaqSingle from './Views/FaqSingle'
+import HowItWork from './Views/HowItWork'
+import HowItWork2 from './Views/HowItWork2'
+import ChatScreen from './Views/ChatScreen'
+import VideoCall from './Views/VideoCall'
 
 
 import Error from './Views/Error'
@@ -124,6 +137,19 @@ class App extends React.Component{
                 <Route path={'/expert-payout'} exact component={(props)=> <ExpertPayoutDetails {...props} />} />
                 <Route path={'/expert-single-list'} exact component={(props)=> <ExpertSingleList {...props} />} />
                 <Route path={'/provide-call'} exact component={(props)=> <ProvideCall {...props} />} />
+                <Route path={'/blog'} exact component={(props)=> <Blog {...props} />} />
+                <Route path={'/single_blog'} exact component={(props)=> <SingleBlog {...props} />} />
+                <Route  path={'/contact-us'} exact component={(props)=> <ContactUs {...props} />}/>
+                <Route  path={'/policy'} exact component={(props)=> <Policy {...props} />}/>
+                <Route  path={'/single-policy'} exact component={(props)=> <SinglePolicy {...props} />}/>
+                <Route  path={'/terms-conditions'} exact component={(props)=> <TermsConditions {...props} />}/>
+                <Route  path={'/faq'} exact component={(props)=> <Faq {...props} />}/>
+                <Route  path={'/faq-search'} exact component={(props)=> <FaqSearch {...props} />}/>
+                <Route  path={'/faq-single'} exact component={(props)=> <FaqSingle {...props} />}/>
+                <Route  path={'/how-it-works'} exact component={(props)=> <HowItWork {...props} />}/>
+                <Route  path={'/how-it-works-2'} exact component={(props)=> <HowItWork2 {...props} />}/>
+                <Route  path={'/chat'} exact component={(props)=> <ChatScreen {...props} />}/>
+                <Route  path={'/video-call'} exact component={(props)=> <VideoCall {...props} />}/>
                   
 
                 <Route path={'*'} exact component={(props) => <Error {...props} />} />

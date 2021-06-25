@@ -1,10 +1,6 @@
-import React, { useRef } from 'react';
-// import { Row, Col, Container } from 'reactstrap';
-// import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
+import React from 'react';
 import { Link } from "react-router-dom";
 import Header from '../../Components/UserHeader'
-// import Slider from "react-slick";
-// import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
 
 class Support extends React.Component {
@@ -51,7 +47,7 @@ class Support extends React.Component {
               <div className="col-12 col-lg-7">
 
                 <div className="user_account_card user_edit_pro_card">
-                  <Link to="/" className="d-flex justify-content-between align-items-center">
+                  <Link to="/how-it-works" className="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 className="f20 f600 clr_black mb-2">How it works</h3>
                       <p className="f14 f400 clr_grey">Basic Information, Topics, Photo, Become an expert.</p>
@@ -63,7 +59,7 @@ class Support extends React.Component {
                 </div>
 
                 <div className="user_account_card user_edit_pro_card">
-                  <Link to="/" className="d-flex justify-content-between align-items-center">
+                  <Link to="/faq" className="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 className="f20 f600 clr_black mb-2">Frequently Asked Questions</h3>
                       <p className="f14 f400 clr_grey">Credit Card, Debit card, Stripe, billing address Details</p>
@@ -75,7 +71,7 @@ class Support extends React.Component {
                 </div>
 
                 <div className="user_account_card user_edit_pro_card">
-                  <Link to="/" className="d-flex justify-content-between align-items-center">
+                  <Link to="/terms-conditions" className="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 className="f20 f600 clr_black mb-2">Term & Condition</h3>
                       <p className="f14 f400 clr_grey">Connect your social media account</p>
@@ -87,7 +83,7 @@ class Support extends React.Component {
                 </div>
 
                 <div className="user_account_card user_edit_pro_card">
-                  <Link to="/" className="d-flex justify-content-between align-items-center">
+                  <Link to="/policy" className="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 className="f20 f600 clr_black mb-2">Privacy Policy</h3>
                       <p className="f14 f400 clr_grey">Connect your social media account</p>
@@ -98,7 +94,7 @@ class Support extends React.Component {
                   </Link>
                 </div>
 
-                <p className="f14 clr_grey f400 mt-3">Need help? <Link to="" className="clr_blue text_underline">Contact Support</Link></p>
+                <p className="f14 clr_grey f400 mt-3">Need help? <Link to="/contact-us" className="clr_blue text_underline">Contact Support</Link></p>
               </div>
 
               <div className="col-12 col-lg-5">

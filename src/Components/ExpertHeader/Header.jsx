@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col, Container } from 'reactstrap';
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 
@@ -59,14 +58,14 @@ class Header extends React.Component {
                   <div className="header_logo mob_order_2">
                     {
                       this.state.headerLogo == 'header' ?
-                      <Link to="/"><img src={Images.logo.default} alt="" className="w-100 hr" /></Link>
+                      <Link to="/"><img src={Images.logo.default} alt="" className="w-100" /></Link>
                       :
-                      <Link to="/"><img src={Images.footer_logo.default} alt="" className="w-100 fr" /></Link>
+                      <Link to="/"><img src={Images.footer_logo.default} alt="" className="w-100" /></Link>
                     }
                   </div>
 
                   <div className="wrapper d-flex align-items-center mob_order_3">
-                    <div className="categories d-none d-lg-block">
+                    <div className="categories d-none d-md-block">
 
                         <UncontrolledButtonDropdown classNameName="">
                             <DropdownToggle classNameName="drop_toggle">
@@ -77,18 +76,18 @@ class Header extends React.Component {
                             <DropdownMenu className='no_dropdown sub_drop_wrapper '>
 
                               <ul>
-                                <li><Link to="/" className="dropdown-item">Entrepreneurship</Link></li>
-                                <li><Link to="/" className="dropdown-item">Digital marketing</Link></li>
-                                <li><Link to="/" className="dropdown-item">Start-ups</Link></li>
-                                <li><Link to="/" className="dropdown-item">SMM</Link></li>
+                                <li><Link to="/category-list" className="dropdown-item">Entrepreneurship</Link></li>
+                                <li><Link to="/category-list" className="dropdown-item">Digital marketing</Link></li>
+                                <li><Link to="/category-list" className="dropdown-item">Start-ups</Link></li>
+                                <li><Link to="/category-list" className="dropdown-item">SMM</Link></li>
                                 <li>
                                   <button className="dropdown-item sub_dropdown_link" onClick={()=> this.openDropdown('technology_dropdown')}>
                                     Technology <i className='fa fa-chevron-right sub_drop_icon'></i>
                                   </button>
                                 </li>
-                                <li><Link to="/" className="dropdown-item">Other menu</Link></li>
-                                <li><Link to="/" className="dropdown-item">Other menu</Link></li>
-                                <li><Link to="/" className="dropdown-item">Other menu</Link></li>
+                                <li><Link to="/category-list" className="dropdown-item">Other menu</Link></li>
+                                <li><Link to="/category-list" className="dropdown-item">Other menu</Link></li>
+                                <li><Link to="/category-list" className="dropdown-item">Other menu</Link></li>
                               </ul>
 
                               <div className={`dropdown-menu category_sub_dropdown sub_menu no_dropdown ${this.state.technology_dropdown ? 'show' : ''}`}>
@@ -96,14 +95,14 @@ class Header extends React.Component {
                                   <li>
                                     <h5 className="clr_black">Technology</h5>
                                   </li>
-                                  <li><Link to="/" className="dropdown-item">Wordpress</Link></li>
-                                  <li><Link to="/" className="dropdown-item">Software development</Link></li>
-                                  <li><Link to="/" className="dropdown-item">Website design</Link></li>
-                                  <li><Link to="/" className="dropdown-item">Shopify</Link></li>
-                                  <li><Link to="/" className="dropdown-item">Woocommerce</Link></li>
-                                  <li><Link to="/" className="dropdown-item">Webflow</Link></li>
-                                  <li><Link to="/" className="dropdown-item">Angular js</Link></li>
-                                  <li><Link to="/" className="dropdown-item">PHP</Link></li>
+                                  <li><Link to="/sub-category-list" className="dropdown-item">Wordpress</Link></li>
+                                  <li><Link to="/sub-category-list" className="dropdown-item">Software development</Link></li>
+                                  <li><Link to="/sub-category-list" className="dropdown-item">Website design</Link></li>
+                                  <li><Link to="/sub-category-list" className="dropdown-item">Shopify</Link></li>
+                                  <li><Link to="/sub-category-list" className="dropdown-item">Woocommerce</Link></li>
+                                  <li><Link to="/sub-category-list" className="dropdown-item">Webflow</Link></li>
+                                  <li><Link to="/sub-category-list" className="dropdown-item">Angular js</Link></li>
+                                  <li><Link to="/sub-category-list" className="dropdown-item">PHP</Link></li>
                                 </ul>
                             </div>
 
@@ -175,26 +174,26 @@ class Header extends React.Component {
                       <button class={`fas fa-times toggle_drawer drawer_closer clr_white ms-auto`} onClick={()=> this.openDropdown('mobDrawer')}></button>
                     <ul>
                       <li className="main_links">
-                        <Link to="browse.php">Browse</Link>
+                        <Link to="/browse">Browse</Link>
                       </li>
 
                       <div className="d-block d-lg-none">
                         <ul className="categories_links">
-                          <li><a className="dropdown-item" href="/">Entrepreneurship</a></li>
+                          <li><Link className="dropdown-item" to="/category-list">Entrepreneurship</Link></li>
 
-                          <li><a className="dropdown-item" href="category_listing_page.php">Digital marketing</a></li>
+                          <li><Link className="dropdown-item" to="/category-list">Digital marketing</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Start-ups</a></li>
+                          <li><Link className="dropdown-item" to="/category-list">Start-ups</Link></li>
 
-                          <li><a className="dropdown-item" href="/">SMM</a></li>
+                          <li><Link className="dropdown-item" to="/category-list">SMM</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Technology</a></li>
+                          <li><Link className="dropdown-item" to="/category-list">Technology</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Other menu</a></li>
+                          <li><Link className="dropdown-item" to="/category-list">Other menu</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Other menu</a></li>
+                          <li><Link className="dropdown-item" to="/category-list">Other menu</Link></li>
 
-                          <li><a className="dropdown-item" href="/">Other menu</a></li>
+                          <li><Link className="dropdown-item" to="/category-list">Other menu</Link></li>
                         </ul>
                       </div>
 
@@ -212,97 +211,97 @@ class Header extends React.Component {
                                 <ul>
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</a>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</a>
+                                          <Link to="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</Link>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</Link>
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</a>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</a>
+                                          <Link to="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</Link>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</Link>
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
@@ -319,7 +318,7 @@ class Header extends React.Component {
                         <UncontrolledButtonDropdown className="user_info_dropdown drop_icon_rotate">
 
                             <DropdownToggle classNameName="drop_toggle">
-                              <div className="user_img_info  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <div className="user_img_info" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <Link className="d-flex align-items-center">
                                   <div className="user_img">
                                     <img src={Images.user_img.default} alt="" className="m-0" />
@@ -334,61 +333,42 @@ class Header extends React.Component {
                             <DropdownMenu className='user_account_dropdown no_dropdown'>
                               <ul>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="user_profile.php">Account</Link>
+                                  <Link className="dropdown-item f16 f400" to="/user-profile">Account</Link>
                                 </li>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="favourite_page_list_view.php">Favorite</Link>
+                                  <Link className="dropdown-item f16 f400" to="/favourite-list">Favorite</Link>
                                 </li>
                                 <li>
                                   <Link className="dropdown-item f16 f400" to="/">Messages</Link>
                                 </li>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="calls_user_side.php">Call</Link>
+                                  <Link className="dropdown-item f16 f400" to="">Call</Link>
                                 </li>
                               </ul>
 
                               <ul>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="edit_profile.php">Edit Profile</Link>
+                                  <Link className="dropdown-item f16 f400" to="edit-profile">Edit Profile</Link>
                                 </li>
                                 <li>
-                                  <Link className="dropdown-item f16 f400" to="setting.php">Setting</Link>
-                                </li>
-                              </ul>
-
-                              <ul>
-                                <li>
-                                  <Link className="dropdown-item f16 f400" to="support.php">Support</Link>
+                                  <Link className="dropdown-item f16 f400" to="/setting">Setting</Link>
                                 </li>
                               </ul>
 
                               <ul>
                                 <li>
-                                  <Link to="index.php" className="dropdown-item f16 f400">Logout</Link>
+                                  <Link className="dropdown-item f16 f400" to="/support">Support</Link>
+                                </li>
+                              </ul>
+
+                              <ul>
+                                <li>
+                                  <Link to="/" className="dropdown-item f16 f400">Logout</Link>
                                 </li>
                               </ul>
                             </DropdownMenu>
                         </UncontrolledButtonDropdown>
 
-
-
-
-                        {/* <div className="dropdown">
-                          <div className="user_img_info drop_icon_rotate user_info_dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <a href="" className="d-flex align-items-center">
-                              <div className="user_img">
-                                <img src={Images.user_img.default} alt="" className="m-0" />
-                              </div>
-                              <div className="user_info ms-3">
-                                <h6 className="f16 f500 clr_white m-0 d-flex align-items-end">Alexjender <i className="fas fa-chevron-down ms-2"></i> </h6>
-                              </div>
-                            </a>
-                          </div>
-                          <div className="dropdown-menu user_account_dropdown" aria-labelledby="dropdownMenuButton">
-
-                            
-                          </div>
-                        </div> */}
                       </li>
                     
                     </ul>
@@ -413,97 +393,97 @@ class Header extends React.Component {
                                 <ul>
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</a>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</a>
+                                          <Link to="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</Link>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</Link>
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</a>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</a>
+                                          <Link to="/" className="theme_dark_btn cmn_btn no_effect_btn me-2">Accept</Link>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Reject</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Rejected</Link>
 
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 
                                   <li>
                                     <div className="user_img_info">
-                                      <a href="/" className="d-flex align-items-center">
+                                      <Link to="/" className="d-flex align-items-center">
                                         <div className="user_img">
                                           <img src={Images.user_img_2.default} alt="" className="ms-0" />
                                         </div>
                                         <div className="user_info ms-3">
                                           <h6 className="f15 f500 clr_black">Kate Kendall <span className="f400 clr_grey">Send you call request.</span></h6>
-                                          <a href="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</a>
+                                          <Link to="/" className="cmn_outline_grey_btn clr_grey cmn_btn no_effect_btn">Cancelled</Link>
                                           <p className="f14 f400 clr_grey text-end mt-2">2 day ago</p>
                                         </div>
-                                      </a>
+                                      </Link>
                                     </div>
                                   </li>
 

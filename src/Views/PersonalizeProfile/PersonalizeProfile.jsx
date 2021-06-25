@@ -1,11 +1,6 @@
-import React, { useRef } from 'react';
-// import { Row, Col, Container } from 'reactstrap';
-// import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
+import React from 'react';
 import { Link } from "react-router-dom";
 import Header from '../../Components/ExpertHeader'
-// import StarRatings from 'react-star-ratings';
-// import Slider from "react-slick";
-// import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
 
 class PersonalizeProfile extends React.Component {

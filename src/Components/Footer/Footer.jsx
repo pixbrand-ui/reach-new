@@ -1,5 +1,4 @@
 import React from 'react';
-import {Row, Col, Container} from 'reactstrap';
 // import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 import { Images } from 'Constants';
@@ -33,16 +32,16 @@ class Footer extends React.Component{
                                 <h4 className="f24 f500 clr_black mb-3">Categories</h4>
                                 <ul className="footer_links">
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">Entrepreneurship</Link>
+                                        <Link to="/category-list" className="f16 f400 clr_grey">Entrepreneurship</Link>
                                     </li>
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">Digital marketing</Link>
+                                        <Link to="/category-list" className="f16 f400 clr_grey">Digital marketing</Link>
                                     </li>
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">Start-ups</Link>
+                                        <Link to="/category-list" className="f16 f400 clr_grey">Start-ups</Link>
                                     </li>
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">Social media marketing</Link>
+                                        <Link to="/category-list" className="f16 f400 clr_grey">Social media marketing</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -53,13 +52,13 @@ class Footer extends React.Component{
                                         <Link to="" className="f16 f400 clr_grey">About us</Link>
                                     </li>
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">How it work</Link>
+                                        <Link to="/how-it-works" className="f16 f400 clr_grey">How it work</Link>
                                     </li>
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">Blog</Link>
+                                        <Link to="/blog" className="f16 f400 clr_grey">Blog</Link>
                                     </li>
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">Contact us</Link>
+                                        <Link to="/contact-us" className="f16 f400 clr_grey">Contact us</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -67,13 +66,13 @@ class Footer extends React.Component{
                                 <h4 className="f24 f500 clr_black mb-3">More</h4>
                                 <ul className="footer_links">
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">Term & condition</Link>
+                                        <Link to="/terms-conditions" className="f16 f400 clr_grey">Term & condition</Link>
                                     </li>
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">Privacy and policy</Link>
+                                        <Link to="/policy" className="f16 f400 clr_grey">Privacy and policy</Link>
                                     </li>
                                     <li>
-                                        <Link to="" className="f16 f400 clr_grey">FAQ</Link>
+                                        <Link to="/faq" className="f16 f400 clr_grey">FAQ</Link>
                                     </li>
                                 </ul>
                             </div>

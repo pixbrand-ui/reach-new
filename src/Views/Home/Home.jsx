@@ -1,59 +1,57 @@
 import React from 'react';
-// import { Row, Col, Container } from 'reactstrap';
-// import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 import Header from '../../Components/IndexHeader'
-import UserHeader from '../../Components/UserHeader'
 import Slider from "react-slick";
-// import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
+
+import TestSlider from 'Components/TestSlider/';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      browse_slider:[
-        {image:Images.browse_img_1.default , title: 'Entrepreneurship'},
-        {image:Images.browse_img_2.default , title: 'Digital marketing'},
-        {image:Images.browse_img_3.default , title: 'Start-ups'},
-        {image:Images.browse_img_4.default , title: 'Social media marketing'},
-        {image:Images.browse_img_3.default , title: 'Digital marketing'},
-        {image:Images.browse_img_2.default , title: 'Entrepreneurship'},
+      browse_slider: [
+        { image: Images.browse_img_1.default, title: 'Entrepreneurship' },
+        { image: Images.browse_img_2.default, title: 'Digital marketing' },
+        { image: Images.browse_img_3.default, title: 'Start-ups' },
+        { image: Images.browse_img_4.default, title: 'Social media marketing' },
+        { image: Images.browse_img_3.default, title: 'Digital marketing' },
+        { image: Images.browse_img_2.default, title: 'Entrepreneurship' },
       ],
 
       charles_blog_slider: [
-        {image:Images.charles_blog_1.default , title: 'Digital marketing made easy' , descryption: 'A practical guide to understand what is digital...'},
-        {image:Images.charles_blog_2.default , title: 'How to write a mission statement' , descryption: 'A practical guide to understand what is digital...'},
-        {image:Images.charles_blog_3.default , title: 'What is an infographic?' , descryption: 'A practical guide to understand what is digital...'},
-        {image:Images.charles_blog_1.default , title: 'Digital marketing made easy' , descryption: 'A practical guide to understand what is digital...'},
-        {image:Images.charles_blog_2.default , title: 'How to write a mission statement' , descryption: 'A practical guide to understand what is digital...'},
-        {image:Images.charles_blog_3.default , title: 'Digital marketing made easy' , descryption: 'A practical guide to understand what is digital...'},
+        { image: Images.charles_blog_1.default, title: 'Digital marketing made easy', descryption: 'A practical guide to understand what is digital...' },
+        { image: Images.charles_blog_2.default, title: 'How to write a mission statement', descryption: 'A practical guide to understand what is digital...' },
+        { image: Images.charles_blog_3.default, title: 'What is an infographic?', descryption: 'A practical guide to understand what is digital...' },
+        { image: Images.charles_blog_1.default, title: 'Digital marketing made easy', descryption: 'A practical guide to understand what is digital...' },
+        { image: Images.charles_blog_2.default, title: 'How to write a mission statement', descryption: 'A practical guide to understand what is digital...' },
+        { image: Images.charles_blog_3.default, title: 'Digital marketing made easy', descryption: 'A practical guide to understand what is digital...' },
       ],
 
       explore_card: [
-        {image: Images.explore_card_1_dark.default , title: 'Entrepreneurship'},
-        {image: Images.explore_card_2_dark.default , title: 'Digital marketing'},
-        {image: Images.explore_card_3_dark.default , title: 'Start-ups' , imgClass: 'rocket_img'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
-        {image: Images.explore_card_4_dark.default , title: 'Social media marketing' , imgClass: 'likeUp'},
+        { image: Images.explore_card_1_dark.default, title: 'Entrepreneurship' },
+        { image: Images.explore_card_2_dark.default, title: 'Digital marketing' },
+        { image: Images.explore_card_3_dark.default, title: 'Start-ups', imgClass: 'rocket_img' },
+        { image: Images.explore_card_4_dark.default, title: 'Social media marketing', imgClass: 'likeUp' },
+        { image: Images.explore_card_4_dark.default, title: 'Social media marketing', imgClass: 'likeUp' },
+        { image: Images.explore_card_4_dark.default, title: 'Social media marketing', imgClass: 'likeUp' },
+        { image: Images.explore_card_4_dark.default, title: 'Social media marketing', imgClass: 'likeUp' },
+        { image: Images.explore_card_4_dark.default, title: 'Social media marketing', imgClass: 'likeUp' },
       ],
 
       testi_slider: [
-        {video: Images.pattern.default , poster: Images.test_video_poster.default , },
-        {video: Images.pattern.default , poster: Images.test_video_poster.default , },
-        {video: Images.pattern.default , poster: Images.test_video_poster.default , },
-        {video: Images.pattern.default , poster: Images.test_video_poster.default , },
-        {video: Images.pattern.default , poster: Images.test_video_poster.default , },
+        { video: Images.pattern.default, poster: Images.test_video_poster.default, videoId: 'video1', player: false },
+        { video: Images.pattern.default, poster: Images.test_video_poster.default, videoId: 'video2', player: false },
+        { video: Images.pattern.default, poster: Images.test_video_poster.default, videoId: 'video3', player: false },
+        { video: Images.pattern.default, poster: Images.test_video_poster.default, videoId: 'video4', player: false },
+        { video: Images.pattern.default, poster: Images.test_video_poster.default, videoId: 'video5', player: false },
       ],
 
     }
   }
 
-  toggleDropdown = (dropName) =>{
-    this.setState({[dropName]: !this.state[dropName] })
+  toggleDropdown = (dropName) => {
+    this.setState({ [dropName]: !this.state[dropName] })
   }
 
   componentDidMount() {
@@ -75,8 +73,8 @@ class Home extends React.Component {
       slidesToScroll: 4,
       arrows: true,
       cssEase: 'linear',
-      prevArrow: <span ><img src={Images.left_nav.default} alt="" className="left_nav cmn_nav"/></span> ,
-      nextArrow: <span ><img src={Images.right_nav.default} alt="" className="right_nav cmn_nav"/></span>,
+      prevArrow: <span ><img src={Images.left_nav.default} alt="" className="left_nav cmn_nav" /></span>,
+      nextArrow: <span ><img src={Images.right_nav.default} alt="" className="right_nav cmn_nav" /></span>,
       responsive: [
         {
           breakpoint: 992,
@@ -118,8 +116,8 @@ class Home extends React.Component {
       slidesToScroll: 3,
       arrows: true,
       cssEase: 'linear',
-      prevArrow: <span ><img src={Images.left_nav.default} alt="" className="left_nav cmn_nav"/></span> ,
-      nextArrow: <span ><img src={Images.right_nav.default} alt="" className="right_nav cmn_nav"/></span>,
+      prevArrow: <span ><img src={Images.left_nav.default} alt="" className="left_nav cmn_nav" /></span>,
+      nextArrow: <span ><img src={Images.right_nav.default} alt="" className="right_nav cmn_nav" /></span>,
       responsive: [
         {
           breakpoint: 992,
@@ -161,8 +159,8 @@ class Home extends React.Component {
       slidesToScroll: 1,
       arrows: true,
       cssEase: 'linear',
-      prevArrow: <span ><img src={Images.left_nav.default} alt="" className="left_nav cmn_nav"/></span> ,
-      nextArrow: <span ><img src={Images.right_nav.default} alt="" className="right_nav cmn_nav"/></span>,
+      prevArrow: <span ><img src={Images.left_nav.default} alt="" className="left_nav cmn_nav" /></span>,
+      nextArrow: <span ><img src={Images.right_nav.default} alt="" className="right_nav cmn_nav" /></span>,
       responsive: [
         {
           breakpoint: 992,
@@ -196,8 +194,8 @@ class Home extends React.Component {
 
     return (
       <React.Fragment>
+
         <Header />
-        {/* <UserHeader /> */}
 
         <section id="banner_section" className="banner_section bg_dark_green">
           <div className="container">
@@ -230,284 +228,241 @@ class Home extends React.Component {
               </div>
 
               <div className="col-12 col-md-12 col-lg-6 position_relative">
-                    <div className="d-flex align-items-end h-100">
-                      <img src={Images.index_banner_girl.default} alt="" className="w-100" />
-                    </div>
-                    <div className="banner_dot_img">
-                      <img src={Images.white_dots.default} alt="" />
-                    </div>
-                  </div>
+                <div className="d-flex align-items-end h-100">
+                  <img src={Images.index_banner_girl.default} alt="" className="w-100" />
+                </div>
+                <div className="banner_dot_img">
+                  <img src={Images.white_dots.default} alt="" />
                 </div>
               </div>
-            </section>
+            </div>
+          </div>
+        </section>
 
         <section id="most_browse_topic_sec" className="professsional_sec most_browse_topic_sec">
-              <div className="container">
-                  <div className="row">
-                      <div classNameName="col-12">
-                        <h2 className="f32 f600 clr_black mb-4">Most Browse Topics</h2>
+          <div className="container">
+            <div className="row">
+              <div classNameName="col-12">
+                <h2 className="f32 f600 clr_black mb-4">Most Browse Topics</h2>
 
-                          <div className="most_browse_topic_slide cmn_slide_navs">
+                <div className="most_browse_topic_slide cmn_slide_navs">
 
-                            <Slider {...browse_slider} classNameName="browse_slider">
-                              {
-                                this.state.browse_slider.map( (obj , i) => {
-                                    return(
-                                      <div className="experts_slide cmn_slide_pdng">
-                                          <div className="expert_img browse_img browse_img">
-                                              <img src={obj.image} alt="" />
-                                          </div>
-                                          <div className="expert_details">
-                                              <h6 className="clr_black f20 f500 mb-2">{obj.title}</h6>
-                                          </div>
-                                      </div>
-                                    )
-                                })
-                                
-                              }
-                            </Slider>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </section>
-
-        <section id="how_it_work_sec" className="how_it_work_sec bg_dark_green">
-              <div className="container">
-                  <div className="row">
-
-                      <div className="col-12 col-md-8 col-lg-6">
-                          <h2 className="f32 f600 clr_white mb-4">How it works?</h2>
-                          <p className="f16 f400 clr_white">
-                              Upgrade to a curated experience packed with tools and benefits, dedicated
-                              to businesses
-                          </p>
-
-                          <ul className="mt-4 work_sec_ul mb-3">
-                              <li>
-                                  <span>1</span>
-                                  <div>
-                                      <h6 className="f20 f500 clr_white mb-2">Find an Expert</h6>
-                                      <p className="f16 f400 clr_white">
-                                          Browse our community of experts to find
-                                          the right one for you.
-                                      </p>
-                                  </div>
-                              </li>
-                              <li>
-                                  <span>2</span>
-                                  <div>
-                                      <h6 className="f20 f500 clr_white mb-2">Request a Call</h6>
-                                      <p className="f16 f400 clr_white">
-                                          At this time, you will be pre-charged for the
-                                          estimated length of the call, based on the expert's per-minute rate.
-                                      </p>
-                                  </div>
-                              </li>
-                              <li>
-                                  <span>3</span>
-                                  <div>
-                                      <h6 className="f20 f500 clr_white mb-2">Connect Directly</h6>
-                                      <p className="f16 f400 clr_white">
-                                          Call the conference line provided. After the call,
-                                          the charge will be adjusted to reflect the actual length of the call.
-                                      </p>
-                                  </div>
-                              </li>
-                          </ul>
-                          <div className="banner_big_btns">
-                              <Link to="/" className="theme_dark_btn">Find your expert</Link>
-                          </div>
-                      </div>
-
-                      <div className="col-12 col-md-4 col-lg-6 d-flex align-items-center">
-                          <img src={Images.how_it_works_img.default} alt="" className="w-100" />
-                      </div>
-                  </div>
-              </div>
-          </section>
-
-        <section id="explore_categories_sec" className="explore_categories_sec">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 position_relative mb-5">
-                        <div className="explore_dot_img">
-                            <img src={Images.green_dots.default} alt="" />
-                        </div>
-                        <h2 className="f32 clr_black f600">Explore the catagories</h2>
-                    </div>
-                </div>
-                <div className="row explore_card_row">
-
-                  {
-                    this.state.explore_card.map( (obj , index)=> {
-                      return(
-                        <div className="col-12 col-md-6 col-lg-3">
-                          <Link to='/'>
-                              <div className="explore_card">
-                                  <div className="explore_card_img">
-                                      <img src={obj.image} alt="" className={`${obj.imgClass}`} />
-                                  </div>
-                                  <h6 className="clr_black f18 f500">{obj.title}</h6>
-                              </div>
-                          </Link>
-                        </div>
-                      )
-                    })
-                  
-                  }
-
-                </div>
-            </div>
-        </section>  
-
-        <section id="testimonials_section" className="testimonials_section">
-            <div className="container position_relative">
-                <img src={Images.green_dots.default} alt="" className="dot_img" />
-
-                <div className="testi_slides_wrapper cmn_slide_navs">
-
-                  <Slider {...testi_slider} classNameName="testi_slider cmn_slide_pdng ">
+                  <Slider {...browse_slider} classNameName="browse_slider">
                     {
-                      this.state.testi_slider.map( (obj , key) => {
-                          return(
-                            <div className="testi_slide cmn_slide_pdng" key={key}>
-                                <div className="row">
-                                    <div className="col-12 col-md-6">
-                                        <div className="testi_video video_wrapper">
-                                            <video 
-                                              src={obj.video} 
-                                              width="100%" 
-                                              height="100%" 
-                                              poster={obj.poster}
-                                              />
-                                            <button className="video_controller" onClick={()=> {this.toggleDropdown('videoToggle')}}>
-                                              {
-                                                this.state.videoToggle ?
-                                                <span><img src={Images.pause_icon.default} alt="" className="pause_btn video_btns"/></span>
-                                                :
-                                                <span><img src={Images.play_icon.default} alt="" className="play_btn video_btns ms-1"/></span>
-                                              }
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 col-md-6 d-flex align-items-center">
-                                        <div className="testi_content">
-                                            <p className="f22 f500 clr_black mb-5">
-                                                "We've used Charles for Shopify web development, graphic design, 
-                                                and backend web development. Working with Fiverr makes my job a little
-                                                easier every day."
-                                            </p>
-                                            <div className="user_img_info">
-                                                <Link to="/" className="d-flex">
-                                                    <div className="user_img">
-                                                        <img src={Images.expert_2.default} alt="" />
-                                                    </div>
-                                                    <div className="user_info ms-3">
-                                                        <h6 className="f18 f500 clr_black mb-2">Kate kendall</h6>
-                                                        <p className="f13 f400 clr_grey">Founded CloudPeeps, The Fetch & Atto.VC.</p>
-                                                    </div>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                      this.state.browse_slider.map((obj, i) => {
+                        return (
+                          <div className="experts_slide cmn_slide_pdng">
+                            <div className="expert_img browse_img browse_img">
+                              <img src={obj.image} alt="" />
                             </div>
-                          )
+                            <div className="expert_details">
+                              <h6 className="clr_black f20 f500 mb-2">{obj.title}</h6>
+                            </div>
+                          </div>
+                        )
                       })
-                      
+
                     }
                   </Slider>
                 </div>
+              </div>
             </div>
+          </div>
+        </section>
+
+        <section id="how_it_work_sec" className="how_it_work_sec bg_dark_green">
+          <div className="container">
+            <div className="row">
+
+              <div className="col-12 col-md-8 col-lg-6">
+                <h2 className="f32 f600 clr_white mb-4">How it works?</h2>
+                <p className="f16 f400 clr_white">
+                  Upgrade to a curated experience packed with tools and benefits, dedicated
+                  to businesses
+                </p>
+
+                <ul className="mt-4 work_sec_ul mb-3">
+                  <li>
+                    <span>1</span>
+                    <div>
+                      <h6 className="f20 f500 clr_white mb-2">Find an Expert</h6>
+                      <p className="f16 f400 clr_white">
+                        Browse our community of experts to find
+                        the right one for you.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <span>2</span>
+                    <div>
+                      <h6 className="f20 f500 clr_white mb-2">Request a Call</h6>
+                      <p className="f16 f400 clr_white">
+                        At this time, you will be pre-charged for the
+                        estimated length of the call, based on the expert's per-minute rate.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <span>3</span>
+                    <div>
+                      <h6 className="f20 f500 clr_white mb-2">Connect Directly</h6>
+                      <p className="f16 f400 clr_white">
+                        Call the conference line provided. After the call,
+                        the charge will be adjusted to reflect the actual length of the call.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div className="banner_big_btns">
+                  <Link to="/" className="theme_dark_btn">Find your expert</Link>
+                </div>
+              </div>
+
+              <div className="col-12 col-md-4 col-lg-6 d-flex align-items-center">
+                <img src={Images.how_it_works_img.default} alt="" className="w-100" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="explore_categories_sec" className="explore_categories_sec">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 position_relative mb-5">
+                <div className="explore_dot_img">
+                  <img src={Images.green_dots.default} alt="" />
+                </div>
+                <h2 className="f32 clr_black f600">Explore the catagories</h2>
+              </div>
+            </div>
+            <div className="row explore_card_row">
+
+              {
+                this.state.explore_card.map((obj, index) => {
+                  return (
+                    <div className="col-12 col-md-6 col-lg-3">
+                      <Link to='/'>
+                        <div className="explore_card">
+                          <div className="explore_card_img">
+                            <img src={obj.image} alt="" className={`${obj.imgClass}`} />
+                          </div>
+                          <h6 className="clr_black f18 f500">{obj.title}</h6>
+                        </div>
+                      </Link>
+                    </div>
+                  )
+                })
+
+              }
+
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonials_section" className="testimonials_section">
+          <div className="container position_relative">
+            <img src={Images.green_dots.default} alt="" className="dot_img" />
+
+            <div className="testi_slides_wrapper cmn_slide_navs">
+              <Slider {...testi_slider}>
+                {
+                  this.state.testi_slider.map((obj, key) => {
+                    return <TestSlider data={obj} key={key} />
+                  })
+
+                }
+              </Slider>
+            </div>
+            
+          </div>
         </section>
 
         <section id="expert_card_sec" className="expert_card_sec">
-            <div className="container">
-                <div className="row">
-                  <div className="col-12">
-                        <div className="expert_card" style={ {backgroundImage: `url(${Images.expert_banner.default})` } }>
-                            <div className="content">
-                                <h2 className="f32 f600 clr_white">Are you an expert?</h2>
-                                <p className="clr_white f16 f400">
-                                    Join a community of passionate experts and thought-leaders who are being 
-                                    sought out by fellow entrepreneurs.
-                                </p>
-                                <div className="banner_big_btns">
-                                    <Link to="/" className="theme_dark_btn">Find your expert</Link>
-                                </div>
-                            </div>
-                        </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="expert_card" style={{ backgroundImage: `url(${Images.expert_banner.default})` }}>
+                  <div className="content">
+                    <h2 className="f32 f600 clr_white">Are you an expert?</h2>
+                    <p className="clr_white f16 f400">
+                      Join a community of passionate experts and thought-leaders who are being
+                      sought out by fellow entrepreneurs.
+                    </p>
+                    <div className="banner_big_btns">
+                      <Link to="/" className="theme_dark_btn">Find your expert</Link>
+                    </div>
                   </div>
                 </div>
+              </div>
             </div>
+          </div>
         </section>
 
         <section id="charles_blog_sec" className="charles_blog_sec">
-              <div className="container">
-                  <div className="row">
-                      <div classNameName="col-12">
-                        <h2 className="f32 f600 clr_black mb-4">Charles Blogs</h2>
+          <div className="container">
+            <div className="row">
+              <div classNameName="col-12">
+                <h2 className="f32 f600 clr_black mb-4">Charles Blogs</h2>
 
-                          <div className="charles_blog_slide cmn_slide_navs">
+                <div className="charles_blog_slide cmn_slide_navs">
 
-                            <Slider {...charles_blog_slider} classNameName="charles_blog_slider">
-                              {
-                                this.state.charles_blog_slider.map( (obj , i) => {
-                                    return(
-                                      <div className="experts_slide cmn_slide_pdng">
-                                          <div className="expert_img charles_blog_img">
-                                              <img src={obj.image} alt="" />
-                                          </div>
-                                          <div className="expert_details">
-                                              <h6 className="clr_black f20 f500 mb-2">{obj.title}</h6>
-                                              <p class="f16 f400 clr_grey">{obj.descryption}</p>
-                                          </div>
-                                      </div>
-                                    )
-                                })
-                                
-                              }
-                            </Slider>
+                  <Slider {...charles_blog_slider} classNameName="charles_blog_slider">
+                    {
+                      this.state.charles_blog_slider.map((obj, i) => {
+                        return (
+                          <div className="experts_slide cmn_slide_pdng">
+                            <div className="expert_img charles_blog_img">
+                              <img src={obj.image} alt="" />
+                            </div>
+                            <div className="expert_details">
+                              <h6 className="clr_black f20 f500 mb-2">{obj.title}</h6>
+                              <p class="f16 f400 clr_grey">{obj.descryption}</p>
+                            </div>
                           </div>
-                      </div>
-                  </div>
+                        )
+                      })
+
+                    }
+                  </Slider>
+                </div>
               </div>
-          </section>
+            </div>
+          </div>
+        </section>
 
         <section id="newsletter_sec" class="newsletter_sec">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-12">
-                          <div class="newsletter" style={{backgroundImage: `url(${Images.newsletter_bg.default})`}}>
-                              <div class="row justify-content-center">
-                                  <div class="col-12 col-lg-7">
-                                      <div class="d-flex align-items-center h-100">
-                                      <div class="newsletter_content max_w_75">
-                                          <h2 class="f32 f600 clr_dark_green mb-3">Subscribe to our Newsletter</h2>
-                                          <p class="f16 f400 clr_dark_green mb-3"> Subscribe to our newsletter to receive exclusive offers, 
-                                              latest news and updates.
-                                          </p>
-                                          <div class="newsletter_input d-flex">
-                                              <input type="text" placeholder="Email address" class="clr_white f16 f400 w-100" />
-                                              <button class="clr_white f16 f500">Submit</button>
-                                          </div>
-                                      </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-12 col-lg-5">
-                                      <img src={Images.newsletter_side_img.default} alt="" class="w-100" />
-                                  </div>
-                              </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="newsletter" style={{ backgroundImage: `url(${Images.newsletter_bg.default})` }}>
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-lg-7">
+                      <div class="d-flex align-items-center h-100">
+                        <div class="newsletter_content max_w_75">
+                          <h2 class="f32 f600 clr_dark_green mb-3">Subscribe to our Newsletter</h2>
+                          <p class="f16 f400 clr_dark_green mb-3"> Subscribe to our newsletter to receive exclusive offers,
+                            latest news and updates.
+                          </p>
+                          <div class="newsletter_input d-flex">
+                            <input type="text" placeholder="Email address" class="clr_white f16 f400 w-100" />
+                            <button class="clr_white f16 f500">Submit</button>
                           </div>
+                        </div>
                       </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <img src={Images.newsletter_side_img.default} alt="" class="w-100" />
+                    </div>
                   </div>
+                </div>
               </div>
-          </section>
+            </div>
+          </div>
+        </section>
 
-        </React.Fragment>
-      )
-    }
+      </React.Fragment>
+    )
   }
+}
 
 export default Home;

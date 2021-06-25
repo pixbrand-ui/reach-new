@@ -1,10 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Row, Col, Container, Collapse, Button, CardBody, Card } from 'reactstrap';
-import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 import Header from '../../Components/UserHeader'
-// import Slider from "react-slick";
-// import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
 
 class PayoutDetails extends React.Component {

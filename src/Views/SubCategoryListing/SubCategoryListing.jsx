@@ -1,11 +1,8 @@
-import React, { useRef } from 'react';
-// import { Row, Col, Container } from 'reactstrap';
+import React from 'react';
 import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import { Link } from "react-router-dom";
 import Header from '../../Components/UserHeader'
 import StarRatings from 'react-star-ratings';
-// import Slider from "react-slick";
-// import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
 
 class SubCategoryListing extends React.Component {
@@ -128,10 +125,10 @@ class SubCategoryListing extends React.Component {
               <div className="col-12 px-0">
                 <div className="d-flex justify-content-between category_listing_btns">
                   <div className="d-flex left_side_btns">
-                    <Link to="/" className="cmn_outline_grey_btn">Wordpress</Link>
-                    <Link to="/" className="cmn_outline_grey_btn">Software development</Link>
-                    <Link to="/" className="cmn_outline_grey_btn">Website design</Link>
-                    <Link to="/" className="cmn_outline_grey_btn">Shopify</Link>
+                    <Link to="/sub-category-list" className="cmn_outline_grey_btn">Wordpress</Link>
+                    <Link to="/sub-category-list" className="cmn_outline_grey_btn">Software development</Link>
+                    <Link to="/sub-category-list" className="cmn_outline_grey_btn">Website design</Link>
+                    <Link to="/sub-category-list" className="cmn_outline_grey_btn">Shopify</Link>
 
                     <button className='drop_wrapper'>
                       <UncontrolledButtonDropdown className="">
@@ -141,34 +138,34 @@ class SubCategoryListing extends React.Component {
                         <DropdownMenu className='no_dropdown menu_start'>
                           <ul className="category_cmn_dropdown">
                             <li>
-                              <Link to='/sub-category'>Wordpress</Link>
+                              <Link to='/sub-category-list'>Wordpress</Link>
                             </li>
                             <li>
-                              <Link to='/sub-category'>Software development</Link>
-                            </li>
-
-                            <li>
-                              <Link to='/sub-category'>Website design</Link>
+                              <Link to='/sub-category-list'>Software development</Link>
                             </li>
 
                             <li>
-                              <Link to='/sub-category'>Shopify</Link>
+                              <Link to='/sub-category-list'>Website design</Link>
                             </li>
 
                             <li>
-                              <Link to='/sub-category'>Woocommerce</Link>
+                              <Link to='/sub-category-list'>Shopify</Link>
                             </li>
 
                             <li>
-                              <Link to='/sub-category'>Webflow</Link>
+                              <Link to='/sub-category-list'>Woocommerce</Link>
                             </li>
 
                             <li>
-                              <Link to='/sub-category'>Angular js</Link>
+                              <Link to='/sub-category-list'>Webflow</Link>
                             </li>
 
                             <li>
-                              <Link to='/sub-category'>PHP</Link>
+                              <Link to='/sub-category-list'>Angular js</Link>
+                            </li>
+
+                            <li>
+                              <Link to='/sub-category-list'>PHP</Link>
                             </li>
                           </ul>
                         </DropdownMenu>

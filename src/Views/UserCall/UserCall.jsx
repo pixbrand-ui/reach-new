@@ -1,10 +1,6 @@
-import React, { useRef } from 'react';
-// import { Row, Col, Container } from 'reactstrap';
-import { UncontrolledButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
+import React from 'react';
 import { Link } from "react-router-dom";
 import Header from '../../Components/UserHeader'
-// import Slider from "react-slick";
-// import {CommonNotifyModal} from 'Modals';
 import { Images } from 'Constants';
 
 class UserCall extends React.Component {
@@ -102,7 +98,7 @@ class UserCall extends React.Component {
   toggleMsgBox = (index , listname) => {
     // this.setState({msgBox : key})
     let arr = [...this.state[listname]];
-    arr[index]['msgBox'] = arr[index]['msgBox'] == false ? true : false;
+    arr[index]['msgBox'] = arr[index]['msgBox'] === false ? true : false;
     this.setState({ [listname]: arr });
 
   }
@@ -130,15 +126,15 @@ class UserCall extends React.Component {
                 </div>
                 <div className="col-12 call_tabs_pos">
                   <div className="call_req_tabs">
-                    <button className={`cmn_tab_btn ${this.state.callTab == 'active' ? 'active' : ''}`} onClick={()=> this.setState({callTab: 'active'})}>Active (3)</button>
-                    <button className={`cmn_tab_btn ${this.state.callTab == 'history' ? 'active' : ''}`}  onClick={()=> this.setState({callTab: 'history'})}>History</button>
+                    <button className={`cmn_tab_btn ${this.state.callTab === 'active' ? 'active' : ''}`} onClick={()=> this.setState({callTab: 'active'})}>Active (3)</button>
+                    <button className={`cmn_tab_btn ${this.state.callTab === 'history' ? 'active' : ''}`}  onClick={()=> this.setState({callTab: 'history'})}>History</button>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section id="active_calls" className={`fav_experts_sec cmn_tabs ${this.state.callTab == 'active' ? 'show' : ''}`}>
+          <section id="active_calls" className={`fav_experts_sec cmn_tabs ${this.state.callTab === 'active' ? 'show' : ''}`}>
             <div className="container">
                 <div className="row">
 
@@ -257,7 +253,7 @@ class UserCall extends React.Component {
             </div>
           </section>
 
-          <section id="active_calls" className={`fav_experts_sec cmn_tabs ${this.state.callTab == 'history' ? 'show' : ''}`}>
+          <section id="active_calls" className={`fav_experts_sec cmn_tabs ${this.state.callTab === 'history' ? 'show' : ''}`}>
             <div className="container">
                 <div className="row">
 
