@@ -41,7 +41,7 @@ class SinglePolicy extends React.Component {
 
               <div className="col-12 col-md-3">
                 <div className="d-flex justify-content-end">
-                  <a href="" className="cmn_blue_btn">Accept</a>
+                  <Link to="" className="cmn_blue_btn">Accept</Link>
                 </div>
               </div>
 
@@ -206,7 +206,7 @@ class SinglePolicy extends React.Component {
                                     </Link>
                                 </li>
                             </ul>
-                            <a href="/policy" className="f16 f500 clr_green">Back to Policy</a>
+                            <Link to="/policy" className="f16 f500 clr_green">Back to Policy</Link>
                         </div>
                     </div>
 

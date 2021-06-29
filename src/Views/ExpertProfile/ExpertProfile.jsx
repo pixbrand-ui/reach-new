@@ -171,7 +171,7 @@ class ExpertProfile extends React.Component {
                       <div className="expert_stats">
 
                           <div className="stat_row ">
-                              <a href="javascript:void(0)" className='d-flex align-items-center justify-content-between'>
+                              <Link to="" className='d-flex align-items-center justify-content-between'>
                                   <div className="points d-flex align-items-center">
                                       <span></span>
                                       <p className="f16 f400 clr_black ms-2">Impressions from Charles</p>
@@ -179,11 +179,11 @@ class ExpertProfile extends React.Component {
                                   <div>
                                       <p className="f16 f500 clr_black ms-2">2</p>
                                   </div>
-                              </a>
+                              </Link>
                           </div>
 
                           <div className="stat_row ">
-                              <a href="javascript:void(0)" className='d-flex align-items-center justify-content-between'>
+                              <Link to="" className='d-flex align-items-center justify-content-between'>
                                   <div className="points d-flex align-items-center">
                                       <span></span>
                                       <p className="f16 f400 clr_black ms-2">Clicks from Impressions</p>
@@ -191,11 +191,11 @@ class ExpertProfile extends React.Component {
                                   <div>
                                       <p className="f16 f500 clr_black ms-2">15</p>
                                   </div>
-                              </a>
+                              </Link>
                           </div>
 
                           <div className="stat_row ">
-                              <a href="javascript:void(0)" className='d-flex align-items-center justify-content-between'>
+                              <Link to="" className='d-flex align-items-center justify-content-between'>
                                   <div className="points d-flex align-items-center">
                                       <span></span>
                                       <p className="f16 f400 clr_black ms-2">Unique Pageviews</p>
@@ -203,11 +203,11 @@ class ExpertProfile extends React.Component {
                                   <div>
                                       <p className="f16 f500 clr_black ms-2">10</p>
                                   </div>
-                              </a>
+                              </Link>
                           </div>
 
                           <div className="stat_row ">
-                              <a href="javascript:void(0)" className='d-flex align-items-center justify-content-between'>
+                              <Link to="" className='d-flex align-items-center justify-content-between'>
                                   <div className="points d-flex align-items-center">
                                       <span></span>
                                       <p className="f16 f400 clr_black ms-2">Call Requests</p>
@@ -215,11 +215,11 @@ class ExpertProfile extends React.Component {
                                   <div>
                                       <p className="f16 f500 clr_black ms-2">5</p>
                                   </div>
-                              </a>
+                              </Link>
                           </div>
 
                           <div className="stat_row ">
-                              <a href="javascript:void(0)" className='d-flex align-items-center justify-content-between'>
+                              <Link to="" className='d-flex align-items-center justify-content-between'>
                                   <div className="points d-flex align-items-center">
                                       <span></span>
                                       <p className="f16 f400 clr_black ms-2">Conversion Rate</p>
@@ -227,7 +227,7 @@ class ExpertProfile extends React.Component {
                                   <div>
                                       <p className="f16 f500 clr_black ms-2">0%</p>
                                   </div>
-                              </a>
+                              </Link>
                           </div>
 
 

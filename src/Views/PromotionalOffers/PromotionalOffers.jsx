@@ -53,7 +53,7 @@ class PromotionalOffers extends React.Component {
                 <button className="f16 f400 clr_black mb-4" onClick={()=> this.goBack()}>
                   <i className="fa fa-chevron-left me-2"></i>Go back
                 </button>
-                <h2 class="f32 f600 clr_black mb-4">
+                <h2 className="f32 f600 clr_black mb-4">
                   Promotional & Offer
                 </h2>
               </div>

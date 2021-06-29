@@ -34,10 +34,10 @@ class Timezone extends React.Component {
         <Header></Header>
 
         <section id="basic_info_sec" className="basic_info_sec">
-          <div class="container">
-            <div class="row">
+          <div className="container">
+            <div className="row">
 
-              <div class="col-12 mb-4">
+              <div className="col-12 mb-4">
                 <button className="f16 f400 clr_black mb-4" onClick={()=> this.goBack()}>
                   <i className="fa fa-chevron-left me-2"></i>Go back
                 </button>

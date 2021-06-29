@@ -174,7 +174,7 @@ class Header extends React.Component {
 
                   <div className={`header_link_closer ${this.state.mobDrawer ? 'd-block' : 'd-none'}`} onClick={()=> this.openDropdown('mobDrawer')}></div>
                   <div className={`header_link ${this.state.mobDrawer ? 'show' : ''}`}>
-                      <button class={`fas fa-times toggle_drawer drawer_closer clr_white ms-auto`} onClick={()=> this.openDropdown('mobDrawer')}></button>
+                      <button className={`fas fa-times toggle_drawer drawer_closer clr_white ms-auto`} onClick={()=> this.openDropdown('mobDrawer')}></button>
                     <ul>
                       
                       <li className="main_links">

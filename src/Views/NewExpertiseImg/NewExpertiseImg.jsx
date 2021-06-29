@@ -135,13 +135,13 @@ class NewExpertiseImg extends React.Component {
 
                     <div className="col-lg-1 d-none d-lg-block"></div>
 
-                    <div class="col-12 col-lg-4">
-                      <div class="expertise_profile_img">
-                        <img src={Images.expertise_profile.default} alt="" class='w-100' />
+                    <div className="col-12 col-lg-4">
+                      <div className="expertise_profile_img">
+                        <img src={Images.expertise_profile.default} alt="" className='w-100' />
 
-                        <div class="profile_controls">
-                            <a href="javascript:void(0)" class="theme_dark_btn no_effect_btn me-2">Change</a>
-                            <a href="javascript:void(0)" class="cmn_btn bg_red_btn">Remove</a>
+                        <div className="profile_controls">
+                            <Link to='/' className="theme_dark_btn no_effect_btn me-2">Change</Link>
+                            <Link to='/' className="cmn_btn bg_red_btn">Remove</Link>
                         </div>
 
                       </div>

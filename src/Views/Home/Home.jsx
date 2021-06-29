@@ -416,7 +416,7 @@ class Home extends React.Component {
                             </div>
                             <div className="expert_details">
                               <h6 className="clr_black f20 f500 mb-2">{obj.title}</h6>
-                              <p class="f16 f400 clr_grey">{obj.descryption}</p>
+                              <p className="f16 f400 clr_grey">{obj.descryption}</p>
                             </div>
                           </div>
                         )
@@ -430,28 +430,28 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section id="newsletter_sec" class="newsletter_sec">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="newsletter" style={{ backgroundImage: `url(${Images.newsletter_bg.default})` }}>
-                  <div class="row justify-content-center">
-                    <div class="col-12 col-lg-7">
-                      <div class="d-flex align-items-center h-100">
-                        <div class="newsletter_content max_w_75">
-                          <h2 class="f32 f600 clr_dark_green mb-3">Subscribe to our Newsletter</h2>
-                          <p class="f16 f400 clr_dark_green mb-3"> Subscribe to our newsletter to receive exclusive offers,
+        <section id="newsletter_sec" className="newsletter_sec">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="newsletter" style={{ backgroundImage: `url(${Images.newsletter_bg.default})` }}>
+                  <div className="row justify-content-center">
+                    <div className="col-12 col-lg-7">
+                      <div className="d-flex align-items-center h-100">
+                        <div className="newsletter_content max_w_75">
+                          <h2 className="f32 f600 clr_dark_green mb-3">Subscribe to our Newsletter</h2>
+                          <p className="f16 f400 clr_dark_green mb-3"> Subscribe to our newsletter to receive exclusive offers,
                             latest news and updates.
                           </p>
-                          <div class="newsletter_input d-flex">
-                            <input type="text" placeholder="Email address" class="clr_white f16 f400 w-100" />
-                            <button class="clr_white f16 f500">Submit</button>
+                          <div className="newsletter_input d-flex">
+                            <input type="text" placeholder="Email address" className="clr_white f16 f400 w-100" />
+                            <button className="clr_white f16 f500">Submit</button>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-5">
-                      <img src={Images.newsletter_side_img.default} alt="" class="w-100" />
+                    <div className="col-12 col-lg-5">
+                      <img src={Images.newsletter_side_img.default} alt="" className="w-100" />
                     </div>
                   </div>
                 </div>

@@ -117,16 +117,16 @@ class AccountVerify extends React.Component {
 
         {/* Link send Modal */}
         <CommonNotifyModal open={(this.state.expertiseModal) ? true : false} toggle={()=> this.closeModal('expertiseModal')} className={'expertiseModal custom_modal_pdng'}>
-            <div class="acc_deactive_modal_body text-center">
-                <img src={Images.check_fill.default} alt="" class="modal_top_img m_b_20" />
-                <h2 class="f28 f600 clr_black m_b_20">
+            <div className="acc_deactive_modal_body text-center">
+                <img src={Images.check_fill.default} alt="" className="modal_top_img m_b_20" />
+                <h2 className="f28 f600 clr_black m_b_20">
                     Your Application Has Been Received
                 </h2>
-                <p class="f16 f400 clr_grey m_b_20">
+                <p className="f16 f400 clr_grey m_b_20">
                     Alexjender, Your application has been received and will be 
                     processed with 24 hours. An email will be sent once it's been reviewed.
                 </p>
-                <Link to="/user-profile" class="theme_dark_btn cmn_btn" >Close</Link>
+                <Link to="/user-profile" className="theme_dark_btn cmn_btn" >Close</Link>
             </div>
         </CommonNotifyModal>
 

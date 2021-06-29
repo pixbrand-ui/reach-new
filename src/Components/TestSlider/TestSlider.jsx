@@ -39,7 +39,7 @@ class TestSlider extends React.Component {
                                     width="100%"
                                     height="100%"
                                     poster={obj.poster}
-                                    ref={this.myRef} 
+                                    ref={this.myRef}
                                 />
                                 <button className={`video_controller ${obj.player ? 'pause' : ''}`} onClick={() => {this.videoController() }}>
                                     {

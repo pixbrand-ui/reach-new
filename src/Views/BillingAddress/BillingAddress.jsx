@@ -108,7 +108,7 @@ class BillingAddress extends React.Component {
                             
                             <div className="col-12">
                               <div className="d-flex justify-content-end">
-                                <a href="javascript:void(0)" className="theme_dark_btn coupon_apply_btn cmn_btn">Save</a>
+                                <Link to="/" className="theme_dark_btn coupon_apply_btn cmn_btn">Save</Link>
                               </div>
                             </div>
 

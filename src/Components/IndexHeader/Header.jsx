@@ -827,7 +827,7 @@ class Header extends React.Component {
                 id=""
                 cols=""
                 rows="6"
-                class="theme_input theme_input_2 mb-3"
+                className="theme_input theme_input_2 mb-3"
                 placeholder="Write you feedback"
               />
 
@@ -843,33 +843,33 @@ class Header extends React.Component {
 
         {/* Interested Topics modal */}
         <CommonNotifyModal open={(this.state.interestedTopicModal) ? true : false} toggle={() => this.closeModal('interestedTopicModal')} className={'interestedTopicModal modal-lg'}>
-          <div class="modal-content border_none">
-              <div class="interested_modal_body ">
-                  <div class="d-flex justify-content-between align-items-center m_b_20">
-                      <h2 class="f28 f600 clr_black">Tell us what you're interested in</h2>
-                      <a href="javascript:void(0)" class="f16 f400 clr_grey">Skip</a>
+          <div className="modal-content border_none">
+              <div className="interested_modal_body ">
+                  <div className="d-flex justify-content-between align-items-center m_b_20">
+                      <h2 className="f28 f600 clr_black">Tell us what you're interested in</h2>
+                      <a href="javascript:void(0)" className="f16 f400 clr_grey">Skip</a>
                   </div>
 
-                  <div class="theme_form_input mb-3">
+                  <div className="theme_form_input mb-3">
                       <label for="interest_topics">Add interest/topics</label>
-                      <div class="input_wrapper">
-                          <input type="email" placeholder="Enter email address" name="" id="interest_topics" class="theme_grey_outline_input theme_input_2 w-100" />
-                          <span><a href="javascript:void(0)"><img src={Images.search_icon_green.default} alt="" class="w_18" /></a></span>
+                      <div className="input_wrapper">
+                          <input type="email" placeholder="Enter email address" name="" id="interest_topics" className="theme_grey_outline_input theme_input_2 w-100" />
+                          <span><a href="javascript:void(0)"><img src={Images.search_icon_green.default} alt="" className="w_18" /></a></span>
                       </div>
                   </div>
 
-                  <div class="intereted_topics_row row">
+                  <div className="intereted_topics_row row">
 
                     {
                       this.state.interestedTopic.map( (obj , key )=>{
                         return(
-                          <div class="topic_column">
-                            <div class={`intereted_topic_card cursor_pointer ${obj.check ? 'active' : ''}`} 
+                          <div className="topic_column">
+                            <div className={`intereted_topic_card cursor_pointer ${obj.check ? 'active' : ''}`} 
                               style={{backgroundImage: `url(${obj.image})`}}
                               onClick={()=> this.togglereview(key , 'interestedTopic')}
                             >
-                              <img src={Images.card_check.default} alt="" class="card_checker" />
-                              <h2 class="f15 f500 clr_white card_title">{obj.title}</h2>
+                              <img src={Images.card_check.default} alt="" className="card_checker" />
+                              <h2 className="f15 f500 clr_white card_title">{obj.title}</h2>
 
                             </div>
 
@@ -880,12 +880,12 @@ class Header extends React.Component {
 
                   </div>
 
-                  <div class="row mt-4">
-                    <div class="col-12 col-md-8 col-lg-7">
-                      <p class="f16 f400 clr_black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum viverra quam at pulvinar.</p>
+                  <div className="row mt-4">
+                    <div className="col-12 col-md-8 col-lg-7">
+                      <p className="f16 f400 clr_black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum viverra quam at pulvinar.</p>
                     </div>
-                    <div class="col-12 col-md-4 col-lg-5">
-                      <Link to="/index" class="theme_dark_btn f16 f600 w-100 cmn_btn">Let's Start</Link>
+                    <div className="col-12 col-md-4 col-lg-5">
+                      <Link to="/index" className="theme_dark_btn f16 f600 w-100 cmn_btn">Let's Start</Link>
                     </div>
                   </div>
 
@@ -896,21 +896,21 @@ class Header extends React.Component {
         {/* Time Slot modal */}
         <CommonNotifyModal open={(this.state.timeSlotModal) ? true : false} toggle={() => this.closeModal('timeSlotModal')} className={'timeSlotModal time_slot'}>
           <div>
-            <h2 class="f20 f600 clr_black mb-3 border_b_grey pb-3">SELECT TIME SLOT</h2>
+            <h2 className="f20 f600 clr_black mb-3 border_b_grey pb-3">SELECT TIME SLOT</h2>
             
-            <form action="javascript:void(0)" class="w-100">
-                <div class="row">
+            <form action="javascript:void(0)" className="w-100">
+                <div className="row">
 
                     {
                       this.state.timeSlot.map( (item , index)=> {
                         return(
-                          <div class="col-12 mb-2">
-                            <div class={`deactivate_radio_wrapper time_slot_radio ${this.state.selectedTimeSlot == index ? 'active' : ''}`}>
-                              <img src={Images.calendar_icon.default} alt="" class='calendar_icon' />
-                              <input type="radio" id={`slot_${index}`} name="time_slot" class="theme_radio" />
+                          <div className="col-12 mb-2">
+                            <div className={`deactivate_radio_wrapper time_slot_radio ${this.state.selectedTimeSlot == index ? 'active' : ''}`}>
+                              <img src={Images.calendar_icon.default} alt="" className='calendar_icon' />
+                              <input type="radio" id={`slot_${index}`} name="time_slot" className="theme_radio" />
                               <label 
                                 for={`slot_${index}`} 
-                                class="f16 f400 clr_black"
+                                className="f16 f400 clr_black"
                                 onClick={()=> this.timeSlot(index)}
                               >
                                 {item.title}
@@ -922,9 +922,9 @@ class Header extends React.Component {
                     }
                     
 
-                    <div class="col-12">
-                        <div class="d-flex justify-content-end">
-                            <button class="theme_dark_btn coupon_apply_btn cmn_btn" onClick={()=>this.closeModal('timeSlotModal')}>Accept Request</button>
+                    <div className="col-12">
+                        <div className="d-flex justify-content-end">
+                            <button className="theme_dark_btn coupon_apply_btn cmn_btn" onClick={()=>this.closeModal('timeSlotModal')}>Accept Request</button>
                         </div>
                     </div>
 

@@ -60,6 +60,7 @@ import HowItWork2 from './Views/HowItWork2'
 import ChatScreen from './Views/ChatScreen'
 import VideoCall from './Views/VideoCall'
 
+import { BASE_NAME, PUBLIC_URL } from './Config';
 
 import Error from './Views/Error'
 
@@ -89,7 +90,7 @@ class App extends React.Component{
 
         <section className={'app-root'}>
 
-          <BrowserRouter>
+          <BrowserRouter basename={BASE_NAME}>
 
             <ScrollToTop>
               <Switch>

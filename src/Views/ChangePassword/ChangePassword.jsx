@@ -121,7 +121,7 @@ class ChangePassword extends React.Component {
                       </div>
 
                       <div className="d-flex justify-content-end">
-                          <a href="" className='theme_dark_btn coupon_apply_btn cmn_btn'>Change Password</a>
+                          <Link to="" className='theme_dark_btn coupon_apply_btn cmn_btn'>Change Password</Link>
                       </div>
                   </form>
                 </div>

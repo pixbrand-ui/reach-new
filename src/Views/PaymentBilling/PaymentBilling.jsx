@@ -47,7 +47,7 @@ class PaymentBilling extends React.Component {
               <div className="col-12 col-lg-7">
 
                 <div className="user_account_card user_edit_pro_card">
-                  <a href="/payment-method" className="d-flex justify-content-between align-items-center">
+                  <Link to="/payment-method" className="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 className="f20 f600 clr_black mb-2">Payment Method</h3>
                       <p className="f14 f400 clr_grey">Basic Information, Topics, Photo, Become an expert.</p>
@@ -55,11 +55,11 @@ class PaymentBilling extends React.Component {
                     <div>
                       <i className="fa fa-chevron-right clr_grey"></i>
                     </div>
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="user_account_card user_edit_pro_card">
-                  <a href="/billing-address" className="d-flex justify-content-between align-items-center">
+                  <Link to="/billing-address" className="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 className="f20 f600 clr_black mb-2">Billing Address</h3>
                       <p className="f14 f400 clr_grey">Credit Card, Debit card, Stripe, billing address Details</p>
@@ -67,11 +67,11 @@ class PaymentBilling extends React.Component {
                     <div>
                       <i className="fa fa-chevron-right clr_grey"></i>
                     </div>
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="user_account_card user_edit_pro_card">
-                  <a href="payout-details" className="d-flex justify-content-between align-items-center">
+                  <Link to="/payout-details" className="d-flex justify-content-between align-items-center">
                     <div>
                       <h3 className="f20 f600 clr_black mb-2">Payout Detail</h3>
                       <p className="f14 f400 clr_grey">Connect your social media account</p>
@@ -79,7 +79,7 @@ class PaymentBilling extends React.Component {
                     <div>
                       <i className="fa fa-chevron-right clr_grey"></i>
                     </div>
-                  </a>
+                  </Link>
                 </div>
 
 

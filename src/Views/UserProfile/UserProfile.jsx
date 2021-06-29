@@ -165,7 +165,7 @@ class UserProfile extends React.Component {
                           Entrepreneurs Out There Who Are Seeking Your
                           Valued Advice And Feedback.
                         </p>
-                        <Link to="become_expert_step_1.php" className="theme_dark_btn cmn_btn mx-auto">Apply To Be An Expert <i className="fa fa-chevron-right ms-2"></i></Link>
+                        <Link to="become-expert" className="theme_dark_btn cmn_btn mx-auto">Apply To Be An Expert <i className="fa fa-chevron-right ms-2"></i></Link>
                       </div>
 
                       <div className="user_account_card">

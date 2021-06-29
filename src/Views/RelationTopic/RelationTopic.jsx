@@ -107,7 +107,7 @@ class RelationTopic extends React.Component {
                     <button className="f16 f400 clr_black mb-4" onClick={()=> this.goBack()}>
                       <i className="fa fa-chevron-left me-2"></i>Go back
                     </button>
-                    <p class="f20 f400 clr_black">3924 Experts In Entrepreneurship Topic</p>
+                    <p className="f20 f400 clr_black">3924 Experts In Entrepreneurship Topic</p>
                   </div>
 
                   <div className="right_side_btns d-flex">

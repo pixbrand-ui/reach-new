@@ -59,11 +59,11 @@ class ExpertEdit extends React.Component {
         <section id="no_expert_list_sec" className="expert_form_sec bg_grey no_expert_list_sec social_media_verification ">
             <div className="container">
                 <div className="row">
-                    <div class="col-12">
+                    <div className="col-12">
                         <button className="f16 f400 clr_black mb-4" onClick={()=> this.goBack()}>
                             <i className="fa fa-chevron-left me-2"></i>Go back
                         </button>
-                        <h2 class="f32 f600 clr_black mb-4">
+                        <h2 className="f32 f600 clr_black mb-4">
                             Edit Area Of Expertise
                         </h2>
                     </div>
@@ -156,13 +156,13 @@ class ExpertEdit extends React.Component {
                     <div className="col-lg-1 d-none d-lg-block"></div>
 
 
-                    <div class="col-12 col-lg-4">
-                      <div class="expertise_profile_img">
-                        <img src={Images.expertise_profile.default} alt="" class='w-100' />
+                    <div className="col-12 col-lg-4">
+                      <div className="expertise_profile_img">
+                        <img src={Images.expertise_profile.default} alt="" className='w-100' />
 
-                        <div class="profile_controls">
-                            <a href="javascript:void(0)" class="theme_dark_btn no_effect_btn me-2">Change</a>
-                            <a href="javascript:void(0)" class="cmn_btn bg_red_btn">Remove</a>
+                        <div className="profile_controls">
+                            <Link to='/' className="theme_dark_btn no_effect_btn me-2">Change</Link>
+                            <Link to='/' className="cmn_btn bg_red_btn">Remove</Link>
                         </div>
 
                       </div>

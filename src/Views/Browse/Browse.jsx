@@ -189,7 +189,7 @@ class Browse extends React.Component {
                     <button className='drop_wrapper'>
                       <UncontrolledButtonDropdown className="">
                         <DropdownToggle className="cmn_outline_grey_btn">
-                          Showing <i class="fa fa-chevron-down ps-1"></i>
+                          Showing <i className="fa fa-chevron-down ps-1"></i>
                         </DropdownToggle>
                         <DropdownMenu className='no_dropdown menu_start '>
                           <ul className="category_cmn_dropdown">

@@ -185,9 +185,9 @@ class SingleListing extends React.Component {
                                       <div className="d-flex cat_expert_list single_expert_list">
                                           <div className="fav_expert_status">
                                               <div className="cat_list_img">
-                                                  <a href="single_listing_page.php">
+                                                  <Link to="single-listing">
                                                     <img src={obj.image} alt="" className="w-100" />
-                                                  </a>
+                                                  </Link>
                                               </div>
                                           </div>
                                           <div className="fav_expert_details">
@@ -429,7 +429,7 @@ class SingleListing extends React.Component {
 
                 <div className="sinle_expert_profile text-center">
                     <div className="profile_img">
-                        <a href="javascript:void(0)" className="d-block"><img src={Images.fav_expert_1.default} alt="" className="w-100" /></a>
+                        <Link to="javascript:void(0)" className="d-block"><img src={Images.fav_expert_1.default} alt="" className="w-100" /></Link>
                     </div>
                     <h2 className="f24 f600  mb-3"><a href="javascript:void(0)" className="clr_black">Kate Kendall</a></h2>
                     <p className="clr_grey f15 f400 mb-3">
