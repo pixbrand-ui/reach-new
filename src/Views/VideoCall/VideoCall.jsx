@@ -82,7 +82,7 @@ class VideoCall extends React.Component {
             </div>
 
             <div className="video_footer_opt">
-              <div className="your_profile">
+              <div className="your_profile" draggable='true'>
                 <Link to="" className="d-flex w-100 h-100">
                   <img src={Images.fav_expert_1.default} alt="" className="w-100" />
                   <video src=""></video>

@@ -59,6 +59,7 @@ import HowItWork from './Views/HowItWork'
 import HowItWork2 from './Views/HowItWork2'
 import ChatScreen from './Views/ChatScreen'
 import VideoCall from './Views/VideoCall'
+import ExpertView from './Views/ExpertView'
 
 import { BASE_NAME, PUBLIC_URL } from './Config';
 
@@ -129,6 +130,7 @@ class App extends React.Component{
                 <Route path={'/add-expertise-list'} exact component={(props) => <AddExpertiseList {...props} /> } />
                 <Route path={'/edit-expertise'} exact component={(props) => <EditExpertise {...props} /> } />
                 <Route path={'/account-verify'} exact component={(props) => <AccountVerify {...props} /> } />
+                <Route  path={'/view-profile'} exact component={(props)=> <ExpertView {...props} />}/>
                 <Route path={'/expert-profile'} exact component={(props) => <ExpertProfile {...props} /> } />
                 <Route path={'/expert-setting'} exact component={(props) => <ExpertSetting {...props} /> } />
                 <Route path={'/expert-list'} exact component={(props) => <ExpertList {...props} /> } />

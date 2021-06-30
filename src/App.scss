@@ -4389,3 +4389,10 @@ body .slick-disabled{
 body.modal-open{
   overflow-y: hidden;
 }
+
+.single_list_figure div a.bg_green{
+  background: var(--green);
+}
+.single_list_figure div a.bg_green:hover{
+  background: transparent;
+}
