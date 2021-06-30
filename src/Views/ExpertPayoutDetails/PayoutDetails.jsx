@@ -101,7 +101,7 @@ class PayoutDetails extends React.Component {
                   </h2>
               </div>
 
-              <div className="col-12 col-lg-4">
+              <div className="col-12 col-lg-4 mob_mb_20">
 
                 <div className="payout_card text-center expert_payout_card">
                     <div className="payment_tabs mb-3">

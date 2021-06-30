@@ -379,6 +379,19 @@
     .user_profile_banner{
         margin-top: 80px;
     }
+    
+    .user_calling_btns a.theme_dark_btn{
+        margin-right: 10px;    
+        margin-bottom: 0px !important;
+    }
+
+    .header_sec.bg_white .header_box .header_link li a{
+        color: #fff;
+    }
+    
+    .header_sec.bg_white .user_account_dropdown ul li a{
+        color: var(--black) !important;
+    }
 
 }
 
@@ -701,7 +714,8 @@
     .deactivate_btn_2{
         flex-wrap: wrap;
     }
-    .deactivate_btn_2 a{
+    .deactivate_btn_2 a,
+    .deactivate_btn_2 button{
         margin-right: 0 !important;
         margin-bottom: 10px;
         width: 100%;
@@ -797,16 +811,6 @@
     .mob_drawer .fas.fa-bars{
         font-size: 25px;
     }
-    
-    /* .categories .dropdown-menu{
-        background: var(--dark_green);
-        width: 100%;
-        max-height: 250px;
-        overflow-y: auto;
-    }
-    .categories ul.dropdown-menu li a:hover{
-        color: #fff;
-    } */
 
     .header_logo.mob_order_2{
         order: 4;
@@ -854,9 +858,33 @@
     .order_md_2{
         order: 2;
     }
-    .header_sec.bg_white .header_box .header_link li a{
-        color: #fff;
+
+    .user_calling_btns a.theme_dark_btn{
+        margin-right: 0px;    
+        margin-bottom: 10px !important;
     }
+    .wrapper_for_pos_sicky{
+        margin-top: 20px;
+    }
+    .acc_deactive_modal_body{
+        padding: 50px 40px;
+    }
+    .mob_mb_20{
+        margin-bottom: 20px;
+    }
+    .f50{
+        font-size: 30px;
+    }
+    .policy_topics_sticky{
+        margin-bottom: 20px;
+    }
+    .policy_modify_ul{
+        margin-left: 20px;
+    }
+    .policy_topics::after{
+        width: 100%;
+    }
+    
 
 }
 

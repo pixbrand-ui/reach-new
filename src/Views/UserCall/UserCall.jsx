@@ -224,7 +224,7 @@ class UserCall extends React.Component {
                               </div>
 
                               <div className="col-12 col-lg-3 col-xl-2">
-                                <div className="d-flex justify-content-end  mob_justify_center user_calling_btns">
+                                <div className="d-flex justify-content-end user_calling_btns">
                                     <div className="text-end">
                                       <p className={`f16 f500 mb-3 ${obj.expertResponseClr}`}>{obj.expertResponse}</p>
                                       {
@@ -322,7 +322,7 @@ class UserCall extends React.Component {
                               </div>
 
                               <div className="col-12 col-lg-3 col-xl-2">
-                                <div className="d-flex justify-content-end  mob_justify_center user_calling_btns">
+                                <div className="d-flex justify-content-end user_calling_btns">
                                     <div className="text-end">
                                       <p className={`f16 f500 ${obj.expertResponseClr}`}>{obj.expertResponse}</p>
                                     </div>

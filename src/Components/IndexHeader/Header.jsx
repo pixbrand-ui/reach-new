@@ -97,11 +97,13 @@ class Header extends React.Component {
       let scrollHeaderClass = 'bg_white';
       let headerLogo = 'footer';
       let scrollSearchBox = 'hide';
+
       if (window.scrollY === 0) {
         scrollHeaderClass = 'top';
         headerLogo = 'header'
         scrollSearchBox = 'show'
       }
+      
       this.setState({ scrollHeaderClass, headerLogo, scrollSearchBox });
     });
   }

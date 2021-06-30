@@ -52,11 +52,13 @@ class TermsConditions extends React.Component {
         <section id="single_policy_sec" className="single_policy_sec">
             <div className="container">
 
-                <div className="row align-items-center m_b_150">
-                    <div className="col-12 col-md-3">
+                <div className="row align-items-center m_b_150 ">
+                    <div className="col-12 col-md-3 mob_mb_20">
                       <img src={Images.policy_img_1.default} alt="" className="w-100" />
                     </div>
+
                     <div className="col-md-1 d-md-block d-none"></div>
+
                     <div className="col-12 col-md-6">
                         <h2 className="f32 f600 clr_black mb-4">Terms & Condition</h2>
                         <p className="f16 f400 clr_black">

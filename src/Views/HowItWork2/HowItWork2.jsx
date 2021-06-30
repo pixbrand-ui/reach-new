@@ -345,26 +345,6 @@ class HowItWork2 extends React.Component {
           </div>
         </section>
 
-        {/* Testing section */}
-        <div className="container">
-          <div className="testi_video video_wrapper">
-            <video
-              src={Images.pattern.default}
-              width="100%"
-              height="100%"
-              poster={Images.test_video_poster.default}
-              ref={(ip) => this.video = ip}
-            />
-            <button className="video_controller" onClick={() => { this.toggleDropdown('videoToggle') }}>
-              {
-                this.state.videoToggle ?
-                  <span><img src={Images.pause_icon.default} alt="" className="pause_btn video_btns" onClick={()=> this.video.pause()} /></span>
-                  :
-                  <span><img src={Images.play_icon.default} alt="" className="play_btn video_btns ms-1" onClick={()=> this.video.play()} /></span>
-              }
-            </button>
-          </div>
-        </div>
 
       </React.Fragment>
     )
