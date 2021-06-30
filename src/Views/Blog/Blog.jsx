@@ -159,7 +159,7 @@ class Blog extends React.Component {
                                   {obj.descrypt}
                                 </p>
                                 <div className="user_img_info">
-                                  <Link to="single_blog.php" className="d-flex align-items-center">
+                                  <Link to="/single_blog" className="d-flex align-items-center">
                                       <div className="user_img">
                                           <img src={obj.userImg} alt="" />
                                       </div>
@@ -197,7 +197,7 @@ class Blog extends React.Component {
                                   {obj.descrypt}
                                 </p>
                                 <div className="user_img_info">
-                                  <Link to="single_blog.php" className="d-flex align-items-center">
+                                  <Link to="/single_blog" className="d-flex align-items-center">
                                       <div className="user_img">
                                           <img src={obj.userImg} alt="" />
                                       </div>
