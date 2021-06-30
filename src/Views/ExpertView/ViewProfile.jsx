@@ -148,13 +148,13 @@ class ViewProfile extends React.Component {
                                       <div className="d-flex cat_expert_list single_expert_list">
                                           <div className="fav_expert_status">
                                               <div className="cat_list_img">
-                                                  <Link to="single-listing">
+                                                  <Link to="/single-listing">
                                                     <img src={obj.image} alt="" className="w-100" />
                                                   </Link>
                                               </div>
                                           </div>
                                           <div className="fav_expert_details">
-                                              <Link className="f20 f600 clr_black mb-2" to="single_listing_page.php">
+                                              <Link className="f20 f600 clr_black mb-2" to="/single-listing">
                                                 {obj.title}
                                               </Link>
                                               <div className="d-flex align-items-center mb-2">

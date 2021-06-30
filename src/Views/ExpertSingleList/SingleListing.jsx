@@ -191,7 +191,7 @@ class SingleListing extends React.Component {
                                               </div>
                                           </div>
                                           <div className="fav_expert_details">
-                                              <Link className="f20 f600 clr_black mb-2" to="single_listing_page.php">
+                                              <Link className="f20 f600 clr_black mb-2" to="/single-listing">
                                                 {obj.title}
                                               </Link>
                                               <div className="d-flex align-items-center mb-2">

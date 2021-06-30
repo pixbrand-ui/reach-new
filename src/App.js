@@ -70,8 +70,8 @@ import Footer from 'Components/Footer'
 import './App.scss';
 import './responsive.css';
 
-class App extends React.Component{
-  constructor(props){
+class App extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
 
@@ -79,13 +79,13 @@ class App extends React.Component{
   }
 
 
-  componenetDidMount(){
+  componenetDidMount() {
 
   }
 
-  render(){
+  render() {
 
-    return(
+    return (
 
       <React.Fragment>
 
@@ -111,49 +111,49 @@ class App extends React.Component{
                 <Route path={'/notification'} exact component={(props) => <Notification {...props} />} />
                 <Route path={'/promotional-offers'} exact component={(props) => <PromotionalOffers {...props} />} />
                 <Route path={'/change-password'} exact component={(props) => <ChangePassword {...props} />} />
-                <Route path={'/support'} exact component={(props) => <Support {...props} /> } />
-                <Route path={'/deactivate-account'} exact component={(props) => <DeactivateAccount {...props} /> } />
-                <Route path={'/favourite-list'} exact component={(props) => <FavouriteList {...props} /> } />
-                <Route path={'/favourite-grid'} exact component={(props) => <FavouriteGrid {...props} /> } />
-                <Route path={'/user-call'} exact component={(props) => <UserCall {...props} /> } />
-                <Route path={'/category-list'} exact component={(props) => <CategoryListing {...props} /> } />
-                <Route path={'/sub-category-list'} exact component={(props) => <SubCategoryListing {...props} /> } />
-                <Route path={'/search-result'} exact component={(props) => <SearchResult {...props} /> } />
-                <Route path={'/relation-topic'} exact component={(props) => <RelationTopic {...props} /> } />
-                <Route path={'/browse'} exact component={(props) => <Browse {...props} /> } />
-                <Route path={'/single-listing'} exact component={(props) => <SingleListing {...props} /> } />
-                <Route path={'/become-expert'} exact component={(props) => <BecomeExpert {...props} /> } />
-                <Route path={'/personalise-profile'} exact component={(props) => <PersonalizeProfile {...props} /> } />
-                <Route path={'/add-expertise'} exact component={(props) => <AddExpertise {...props} /> } />
-                <Route path={'/new-expertise'} exact component={(props) => <NewExpertise {...props} /> } />
-                <Route path={'/new-expertise-img'} exact component={(props) => <NewExpertiseImg {...props} /> } />
-                <Route path={'/add-expertise-list'} exact component={(props) => <AddExpertiseList {...props} /> } />
-                <Route path={'/edit-expertise'} exact component={(props) => <EditExpertise {...props} /> } />
-                <Route path={'/account-verify'} exact component={(props) => <AccountVerify {...props} /> } />
-                <Route  path={'/view-profile'} exact component={(props)=> <ExpertView {...props} />}/>
-                <Route path={'/expert-profile'} exact component={(props) => <ExpertProfile {...props} /> } />
-                <Route path={'/expert-setting'} exact component={(props) => <ExpertSetting {...props} /> } />
-                <Route path={'/expert-list'} exact component={(props) => <ExpertList {...props} /> } />
-                <Route path={'/expert-edit'} exact component={(props)=> <ExpertEdit {...props} />} />
-                <Route path={'/hourly-rate'} exact component={(props)=> <ExpertHourlyRate {...props} />} />
-                <Route path={'/availability'} exact component={(props)=> <ExpertAvailability {...props} />} />
-                <Route path={'/expert-payout'} exact component={(props)=> <ExpertPayoutDetails {...props} />} />
-                <Route path={'/expert-single-list'} exact component={(props)=> <ExpertSingleList {...props} />} />
-                <Route path={'/provide-call'} exact component={(props)=> <ProvideCall {...props} />} />
-                <Route path={'/blog'} exact component={(props)=> <Blog {...props} />} />
-                <Route path={'/single_blog'} exact component={(props)=> <SingleBlog {...props} />} />
-                <Route  path={'/contact-us'} exact component={(props)=> <ContactUs {...props} />}/>
-                <Route  path={'/policy'} exact component={(props)=> <Policy {...props} />}/>
-                <Route  path={'/single-policy'} exact component={(props)=> <SinglePolicy {...props} />}/>
-                <Route  path={'/terms-conditions'} exact component={(props)=> <TermsConditions {...props} />}/>
-                <Route  path={'/faq'} exact component={(props)=> <Faq {...props} />}/>
-                <Route  path={'/faq-search'} exact component={(props)=> <FaqSearch {...props} />}/>
-                <Route  path={'/faq-single'} exact component={(props)=> <FaqSingle {...props} />}/>
-                <Route  path={'/how-it-works'} exact component={(props)=> <HowItWork {...props} />}/>
-                <Route  path={'/how-it-works-2'} exact component={(props)=> <HowItWork2 {...props} />}/>
-                <Route  path={'/chat'} exact component={(props)=> <ChatScreen {...props} />}/>
-                <Route  path={'/video-call'} exact component={(props)=> <VideoCall {...props} />}/>
-                  
+                <Route path={'/support'} exact component={(props) => <Support {...props} />} />
+                <Route path={'/deactivate-account'} exact component={(props) => <DeactivateAccount {...props} />} />
+                <Route path={'/favourite-list'} exact component={(props) => <FavouriteList {...props} />} />
+                <Route path={'/favourite-grid'} exact component={(props) => <FavouriteGrid {...props} />} />
+                <Route path={'/user-call'} exact component={(props) => <UserCall {...props} />} />
+                <Route path={'/category-list'} exact component={(props) => <CategoryListing {...props} />} />
+                <Route path={'/sub-category-list'} exact component={(props) => <SubCategoryListing {...props} />} />
+                <Route path={'/search-result'} exact component={(props) => <SearchResult {...props} />} />
+                <Route path={'/relation-topic'} exact component={(props) => <RelationTopic {...props} />} />
+                <Route path={'/browse'} exact component={(props) => <Browse {...props} />} />
+                <Route path={'/single-listing'} exact component={(props) => <SingleListing {...props} />} />
+                <Route path={'/become-expert'} exact component={(props) => <BecomeExpert {...props} />} />
+                <Route path={'/personalise-profile'} exact component={(props) => <PersonalizeProfile {...props} />} />
+                <Route path={'/add-expertise'} exact component={(props) => <AddExpertise {...props} />} />
+                <Route path={'/new-expertise'} exact component={(props) => <NewExpertise {...props} />} />
+                <Route path={'/new-expertise-img'} exact component={(props) => <NewExpertiseImg {...props} />} />
+                <Route path={'/add-expertise-list'} exact component={(props) => <AddExpertiseList {...props} />} />
+                <Route path={'/edit-expertise'} exact component={(props) => <EditExpertise {...props} />} />
+                <Route path={'/account-verify'} exact component={(props) => <AccountVerify {...props} />} />
+                <Route path={'/view-profile'} exact component={(props) => <ExpertView {...props} />} />
+                <Route path={'/expert-profile'} exact component={(props) => <ExpertProfile {...props} />} />
+                <Route path={'/expert-setting'} exact component={(props) => <ExpertSetting {...props} />} />
+                <Route path={'/expert-list'} exact component={(props) => <ExpertList {...props} />} />
+                <Route path={'/expert-edit'} exact component={(props) => <ExpertEdit {...props} />} />
+                <Route path={'/hourly-rate'} exact component={(props) => <ExpertHourlyRate {...props} />} />
+                <Route path={'/availability'} exact component={(props) => <ExpertAvailability {...props} />} />
+                <Route path={'/expert-payout'} exact component={(props) => <ExpertPayoutDetails {...props} />} />
+                <Route path={'/expert-single-list'} exact component={(props) => <ExpertSingleList {...props} />} />
+                <Route path={'/provide-call'} exact component={(props) => <ProvideCall {...props} />} />
+                <Route path={'/blog'} exact component={(props) => <Blog {...props} />} />
+                <Route path={'/single_blog'} exact component={(props) => <SingleBlog {...props} />} />
+                <Route path={'/contact-us'} exact component={(props) => <ContactUs {...props} />} />
+                <Route path={'/policy'} exact component={(props) => <Policy {...props} />} />
+                <Route path={'/single-policy'} exact component={(props) => <SinglePolicy {...props} />} />
+                <Route path={'/terms-conditions'} exact component={(props) => <TermsConditions {...props} />} />
+                <Route path={'/faq'} exact component={(props) => <Faq {...props} />} />
+                <Route path={'/faq-search'} exact component={(props) => <FaqSearch {...props} />} />
+                <Route path={'/faq-single'} exact component={(props) => <FaqSingle {...props} />} />
+                <Route path={'/how-it-works'} exact component={(props) => <HowItWork {...props} />} />
+                <Route path={'/how-it-works-2'} exact component={(props) => <HowItWork2 {...props} />} />
+                <Route path={'/chat'} exact component={(props) => <ChatScreen {...props} />} />
+                <Route path={'/video-call'} exact component={(props) => <VideoCall {...props} />} />
+
 
                 <Route path={'*'} exact component={(props) => <Error {...props} />} />
               </Switch>
